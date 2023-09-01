@@ -49,9 +49,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID    | Descrição do Requisito  | Prioridade | Responsável |
 |------|-----------------------------------------|----| ----|
 |RF-001| Permitir que o usuário cadastre os dados | ALTA | Usuário  |
-|RF-002| Permitir que o prestador de serviço cadastre os dados   | ALTA | Usuário |
-│RF-003│ Permitir que o usuário contacte com o prestador de serviço através do chatbox │ ALTA │ Aplicação │
-│RF-004│ Localizar borracharias próximas ao usuário │ ALTA │ Aplicação │
+|RF-002| Permitir que o prestador de serviço cadastre os dados | ALTA | Usuário |
+|RF-003| Permitir que o usuário contacte com o prestador de serviço através do chatbox | ALTA | Aplicação |
+|RF-004| Localizar borracharias próximas ao usuário | ALTA | Aplicação |
 
 ### Requisitos não Funcionais
 
