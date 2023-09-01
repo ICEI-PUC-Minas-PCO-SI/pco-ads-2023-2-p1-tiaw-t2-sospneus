@@ -28,8 +28,12 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Como motorista  | preciso de garantias da qualidade do serviço prestado           | para reduzir os riscos a que me exponho|
+|Como motorista       | gostaria de uma borracharia por perto                 | para ser atendido o mais breve possível |
+|Como motorista       | gostaria de saber das formas de pagamentos previamente                 | para me ajudar a evitar mal-entendidos |
+|Como micro-empresário       | gostaria de aumentar o número de clientes                | para aumentar o faturamento |
+|Como micro-empresário       | gostaria de ter publicidade                | para divulgar o bom serviço que presto |
+|Como micro-empresário       | gostaria de ter um registro do serviço prestado               | para poder recuperar em casos de intercorrências |
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
