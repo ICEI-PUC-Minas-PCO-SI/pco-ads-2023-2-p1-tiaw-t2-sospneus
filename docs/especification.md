@@ -56,7 +56,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-002| Permitir que o prestador de serviço cadastre os dados | ALTA | Usuário |
 |RF-003| Permitir que o usuário contacte com o prestador de serviço através do chatbox | ALTA | Aplicação |
 |RF-004| Localizar borracharias próximas ao usuário | ALTA | Aplicação |
-|RF-005| Permitir que o usuário comente e deêm nota referente ao serviço prestado | MEDIO | Aplicação e Usuário |
+|RF-005| Permitir que o usuário comente e dêem nota referente ao serviço prestado | MEDIO | Aplicação e Usuário |
 
 ### Requisitos não Funcionais
 
