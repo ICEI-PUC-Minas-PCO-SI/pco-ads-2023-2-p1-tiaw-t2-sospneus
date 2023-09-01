@@ -2,25 +2,29 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=11691174&assignment_repo_type=AssignmentRepo)
 # Título do Projeto
 
-`CURSO: Sistemas de Informação`
+`CURSO: ANALÍSE E DESENVOLVIMENTO DE SISTEMAS`
 
-`DISCIPLINA: Projeto - Aplicações Web`
+`TRABALHO INTERDISCIPLINAR: APLICAÇÕES WEB`
 
-`SEMESTRE: 1º`
+`SEMESTRE 2`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Introdução: 
+
+Nosso aplicativo tem como ideia principal ajudar ao próximo, o aplicativo se resume em serviço de borracharia, será um aplicativo em tempo real que ao ser acionado mostra ao usuário a localização de borracharias próximas a ele,essas borracharias terão média de notas e comentários referentes ao seu serviço, selecionando uma borracharia abre-se um ChatBox permitindo a comunicação do usuário com o prestador de serviço, nesse ChatBox o usuário pode fornecer informações que sejam relevantes para a execução do serviço, com o serviço finalizado, o usuário deve dar uma nota e digitar um comentário, o aplicativo vai demonstrar as formas de pagamento, mas o pagamento será feito entre o usuário e o prestador de serviço, com exceção do pagamento via pix que pode ter um QRCODE gerado por nosso aplicativo para facilitar ao interação entre o usuário e o prestador de serviço.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
+* ALEXANDRE ASSIS MARTINS (ADS)
+* WAGNER TEOFILO DE SOUZA JUNIOR (ADS)
+* LUIS GUSTAVO DO NASCIMENTO MARINHO (ADS)
+* FERNANDO OLIVEIRA SOARES (SIS)
+* DAVI COSTA DA SILVA (SIS)
+* ARTHUR BATISTA LOBO (ADS)
+* MATHEUS HENRIQUE BOLINA DINIZ (ADS)
 
 ## Orientador
 
-* Nome completo do professor 1
+* FABIO LEANDRO RODRIGUES CORDEIRO
 
 # Planejamento
 
