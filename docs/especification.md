@@ -1,8 +1,10 @@
 # Especificações do Projeto
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
+O projeto trará uma aplicação voltada para motoristas e motoqueiros(as) com funcionalidades para facilitar seu cotidiano, eles poderam solicitar serviços tais como: solicitar um borracheiro para realizar a troca, manutenção, montar, desmontar, calibrar, balancear e alinhar pneus. prestar socorro aos veículos que sofrem alguma colisão nas rodas, além de conseguir localizar borracharias próxima a sua localização atual cadastradas e verificadas pelo aplicativo
 
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+A aplicação será desenvolvida utilizando as seguintes tecnologias:
+FrontEnd - HMTL+CSS, Bootstrap, Jquery
+BackEnd  - JavaScript, LocalStorage, Crud Server Json
 
 ## Personas
 
