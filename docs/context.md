@@ -1,51 +1,30 @@
 # Introdução
 
-Imagine que você deseja apresentar este projeto para investidores que deverão decidir se investem ou não no desenvolvimento da sua ferramenta.
-
-A **Introdução** consiste das etapas: *Contextualização -- Definição do problema -- Definição dos Objetivos -- Justificativa*, e tem como função situar o seu trabalho dentro de um contexto de mercado e mostrar a importância da sua proposta para resolver a dor de um usuário.
-
-
-A Contextualização deve situar sem projeto em um determinado contexto de mercado, a fim de fornecer informações adicionais que possam ajudar a entender melhor o assunto que você irá abordar. Serve também para definir a relevância do seu assunto, uma vez que mostra o tamanho do mercado em que se está inserido. Ela pode envolver a análise de vários aspectos, como o ambiente histórico, cultural, político e social em que o problema a ser atacado surgiu.
-
-Escreva de 2 a 3 parágrafos para contetualizar o seu projeto.
+Nosso aplicativo tem como ideia principal ajudar ao próximo, o aplicativo se resume em serviço de borracharia, será um aplicativo em tempo real que ao ser acionado mostra ao usuário a localização de borracharias próximas a ele,essas borracharias terão média de notas e comentários referentes ao seu serviço, selecionando uma borracharia abre-se um ChatBox permitindo a comunicação do usuário com o prestador de serviço, nesse ChatBox o usuário pode fornecer informações que sejam relevantes para a execução do serviço, com o serviço finalizado, o usuário deve dar uma nota e digitar um comentário, o aplicativo vai demonstrar as formas de pagamento, mas o pagamento será feito entre o usuário e o prestador de serviço, com exceção do pagamento via pix que pode ter um QRCODE gerado por nosso aplicativo para facilitar ao interação entre o usuário e o prestador de serviço.
 
 ## Problema
 
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
-
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+O nosso projeto, concentra-se nas dificuldades dos motoristas em encotrar borracharias diponiveis, que atendam suas demandas, de forma rapida, clara, segura, e com qualidade, com preços atraentes e que tambem promova garantia entre as partes. E também auxilie em indicar quais passos que devem ocorrer, em situações de risco, pois varias pessoas sofrem com problemas enormes em vias urbanas, vias rurais e estradas espalhadas pelo municipio de Contagem.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
-
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Facilitar a vida do motorista que precisa de um serviço de borracharia.
+Dar capilaridade ao negócio do borracheiro.
+Tornar a qualidade do serviço prestado pela borracharia transparente para o motorista.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Nosso grupo não encontrou nenhuma aplicação referente a borracharia e aos seus serviços;
+O nosso aplicativo procura facilitar e ajudar na troca de pneus;
+A auxiliar e facilitar a rotina de um motorista no seu cotidiano;
+Melhorar a relação do motorista em relação ao serviço do borracheiro;
+Incentivar o micro-empreendedor;
+Fortalecer a economia local.
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+Nosso publico alvo são as pessoas que possuem pouco conhecimento e com pouca disposição para a troca de pneus, com isso criamos esse app para fazer a ligação entre o cliente e o borracheiro.
+Imagine que você está indo para um compromisso super importante seu pneu fura e você não pode se sujar ou não tem a pratica de realizar a troca. A primeira opção seria acionar a seguradora, porem teria que fazer um chamado e levaria horas para a troca do pneu se realizar, por isso criamos esse app para facilitar a vida do motorista, poupando tempo e fazendo com que os comercios locais cresçam.
 
 > **Links Úteis**:
 > - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
