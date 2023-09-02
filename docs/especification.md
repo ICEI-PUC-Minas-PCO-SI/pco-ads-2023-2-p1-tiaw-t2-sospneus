@@ -14,6 +14,7 @@ BackEnd  - JavaScript, LocalStorage, Crud Server Json
 Por ser um homem de negócios,sempre vai para o trabalho de terno.Caso ocorra algum contratempo,por exemplo seu pneu seja furado,o mesmo não possui condições de realizar a troca ,já que não pode em hipótese alguma suja seu "uniforme de trabalho".
 O aplicativo perfeito para este tipo de pessoa,um cara ocupado que não tem tempo a perder.
 O aplicativo o salvaria neste tipo de situação,pelo fato de que com apenas um simples toque ,ele é capaz de contatar o borracheiro mais próximo para ajudá-lo a lidar com este problema,para que ele consiga ultrapassar este obstáculo e chegar devidamente apto para mais um dia de trabalho.
+* Larissa Rafaela tem 23 anos, acabou de se formar em Engenharia de alimentos e está a caminho de sua formatura, ao passar em um buraco não sinalizado teve um de seus pneus furados, ela deseja um tipo de serviço com que ela consiga solicitar um borracheiro próximo a ela para realizar a manutenção de seu pneu para que ela não se atrase e nem atrapalhe sua roupa de formanda 
 
 
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
