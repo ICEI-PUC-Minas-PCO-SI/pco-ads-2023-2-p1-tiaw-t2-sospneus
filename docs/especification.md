@@ -8,7 +8,7 @@ BackEnd  - JavaScript, LocalStorage, Crud Server Json
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+* Cléber tem 42 anos, é um motorista de transporte escolar que diariamente realiza o transporte de crianças e adolescentes até suas determinadas escolas ou casas e para isso precisa sempre manter o seu veículo funcionando e seguro, o pior cenário possível seria que ocorresse algum problema no veículo que de alguma forma prejudicasse o seu trabalho, com isso, impossibilitando o transporte, como por exemplo o pneu furado. Em casos assim ele deve procurar uma borracharia para que conseguia realizar a manutenção do pneu furado, mas como achar uma borracharia em um lugar que ele nem mesmo conhece, nesse momento que o aplicativo entra, ele pode tanto pedir ajuda para o local possibilitando assim a finalização do trajeto ou encontrar a borracharia mais perto para ir até o local fazer a manutenção.
 
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
 
