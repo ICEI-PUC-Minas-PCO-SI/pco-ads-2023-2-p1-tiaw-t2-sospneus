@@ -9,11 +9,13 @@ BackEnd  - JavaScript, LocalStorage, Crud Server Json
 ## Personas
 
 * Cléber tem 42 anos, é um motorista de transporte escolar que diariamente realiza o transporte de crianças e adolescentes até suas determinadas escolas ou casas e para isso precisa sempre manter o seu veículo funcionando e seguro, o pior cenário possível seria que ocorresse algum problema no veículo que de alguma forma prejudicasse o seu trabalho, com isso, impossibilitando o transporte, como por exemplo o pneu furado. Em casos assim ele deve procurar uma borracharia para que conseguia realizar a manutenção do pneu furado, mas como achar uma borracharia em um lugar que ele nem mesmo conhece, nesse momento que o aplicativo entra, ele pode tanto pedir ajuda para o local possibilitando assim a finalização do trajeto ou encontrar a borracharia mais perto para ir até o local fazer a manutenção.
+  
 * Douglas de Andrade,35 anos ,classe alta ,graduado e pós graduado em direito,trabalha como advogado em um prédio de advocacia no centro de Contagem.
 É um homem muito ocupado,seu carro é um Jeep Compass e ele trabalha de segunda a sexta ,no período de 8:00 até as 17:30..
 Por ser um homem de negócios,sempre vai para o trabalho de terno.Caso ocorra algum contratempo,por exemplo seu pneu seja furado,o mesmo não possui condições de realizar a troca ,já que não pode em hipótese alguma suja seu "uniforme de trabalho".
 O aplicativo perfeito para este tipo de pessoa,um cara ocupado que não tem tempo a perder.
 O aplicativo o salvaria neste tipo de situação,pelo fato de que com apenas um simples toque ,ele é capaz de contatar o borracheiro mais próximo para ajudá-lo a lidar com este problema,para que ele consiga ultrapassar este obstáculo e chegar devidamente apto para mais um dia de trabalho.
+
 * Larissa Rafaela tem 23 anos, acabou de se formar em Engenharia de alimentos e está a caminho de sua formatura, ao passar em um buraco não sinalizado teve um de seus pneus furados, ela deseja um tipo de serviço com que ela consiga solicitar um borracheiro próximo a ela para realizar a manutenção de seu pneu para que ela não se atrase e nem atrapalhe sua roupa de formanda 
 
 
