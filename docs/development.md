@@ -27,16 +27,27 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 
 |ID    | Descrição do Requisito | Prioridade | Artefato Criado |
 |------|------------------------|------------|-----------------|
-|RF-001| O sistema deve exibir as notícias mais populares. | ALTA | index.html |
-|RF-002| Usuários autenticados podem registrar novas notícias. | ALTA | cadastro-noticia.html |
+|RF-001| O sistema deve exibir uma apresentação do Sistema e seu propósito. | ALTA | index.html |
+|RF-002| Usuários autenticados podem solicitar serviços. | ALTA | cadastro-demanda.html |
+|RF-003| O sistema deve permitir que o usuário comente e dêem nota referente ao serviço prestado. | MÉDIA | cadastro-demanda.html |
+|RF-004| Sistema deve disponibilizar tela com histórico do serviço prestado (Formulário com os dados completos). | MÉDIA | historico-demanda.html |
+
+### Requisitos Não Funcionais
+
+|ID    | Descrição do Requisito | Prioridade | Artefato Criado |
+|------|------------------------|------------|-----------------|
+|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel. | ALTA | Todas as telas |
+|RNF-002| O sistema deve processar requisições do usuário em no máximo 3 segundos. | ALTA | cadastro-demanda.html |
+|RNF-003| O sistema deve tomar como referência a localização do usuario e do prestador de serviço. | MÉDIA | cadastro-demanda.html |
+|RNF-004| Sistema deve buscar atualizações de acordo com o Google Maps, para melhor precisão. | ALTA | cadastro-demanda.html |
 
 ## Descrição das estruturas:
 
 ## Notícia
 |  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
 |:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| Id             | Numero (Inteiro)  | Identificador único da notícia            | 1                                              |
-| Título         | Texto             | Título da notícia                         | Sistemas de Informação PUC Minas é o melhor                                   |
-| Conteúdo       | Texto             | Conteúdo da notícia                       | Sistemas de Informação da PUC Minas é eleito o melhor curso do Brasil                            |
-| Id do usuário  | Numero (Inteiro)  | Identificador do usuário autor da notícia | 1                                              |
+| Id             | Numero (Inteiro incremental)  | Identificador único da demanda aberta            | 10000001                                              |
+| Nome do usuario         | Texto             |Nome do usuário do Sistema                         | Maria da Silva Dias                                   |
+| Demanda      | Texto             | Descrição da demanda                      | Estou com o pneu traseiro furado de um Palio 2008                            |
+| Data da demanda | Data  | Data e hora em que a demanda foi aberta | 15/09/2023 14:32                                              |
 
