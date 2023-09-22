@@ -32,6 +32,7 @@ ALEXANDRE:
 * Nome do Aplicativo;
 * Criou a introdução;
 * Objetivo;
+* Especificações do projeto;
 * Requisitos funcionais;
 * Realizei o PITCH e a introdução do nosso aplicativo no video;
 * Organização para apresentação do video.
