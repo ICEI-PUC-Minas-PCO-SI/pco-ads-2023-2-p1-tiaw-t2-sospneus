@@ -27,3 +27,19 @@ Luis Gustavo:
 * Listei as restrições das espicificações do projeto;
 * Realizaei a apresentação de duas personas e as considerações finais no video da parte 1.
 
+ALEXANDRE:
+* Teve a ideia do aplicativo;
+* Nome do Aplicativo;
+* Criou a introdução;
+* Objetivo;
+* Requisitos funcionais;
+* Realizei o PITCH e a introdução do nosso aplicativo no video;
+* Organização para apresentação do video.
+
+FERNANDO:
+* Auxilio na introdução;
+* Auxilio no objeto;
+* Criou 2 Personas;
+* Editou o video;
+* Entrega do trabalho.
+
