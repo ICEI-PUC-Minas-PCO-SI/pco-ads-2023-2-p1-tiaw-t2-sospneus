@@ -10,9 +10,10 @@ Davi:
 
   
 Wagner: 
-*Contribui na criação de personas;
-*Requisitos não funcionais;
-*Finalização de slides;
-*Publico Alvo;
-*Criação de justificativas.
-*Apresentação de duas personas no video.
+
+* Contribui na criação de personas;
+* Requisitos não funcionais;
+* Finalização de slides;
+* Publico Alvo;
+* Criação de justificativas.
+* Apresentação de duas personas no video.
