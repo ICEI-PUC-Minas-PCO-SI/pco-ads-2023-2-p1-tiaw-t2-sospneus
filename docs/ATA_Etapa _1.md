@@ -7,6 +7,8 @@ Davi:
 * Criei a documentação de contexto
 * Adicionei a especificação do projeto
 * Falei sobre os objetivos do projeto na apresentação
+
+  
 Wagner: 
 *Contribui na criação de personas;
 *Requisitos não funcionais;
