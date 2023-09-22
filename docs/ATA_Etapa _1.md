@@ -17,3 +17,13 @@ Wagner:
 * Publico Alvo;
 * Criação de justificativas.
 * Apresentação de duas personas no video.
+
+Luis Gustavo: 
+* Realizei a criação de uma justificativa e os problemas para a documentação;
+* Organizei as reuniões onlines;
+* Organizei os pontos e orientações nas reuniões onlines;
+* Criação de duas personas;
+* Criei um esboço dos slides da aprensentação;
+* Listei as restrições das espicificações do projeto;
+* Realizaei a apresentação de duas personas e as considerações finais no video da parte 1.
+
