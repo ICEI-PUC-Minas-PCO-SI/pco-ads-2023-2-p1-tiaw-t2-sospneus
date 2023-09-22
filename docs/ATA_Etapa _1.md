@@ -39,6 +39,7 @@ ALEXANDRE:
 FERNANDO:
 * Auxilio na introdução;
 * Auxilio no objeto;
+* Auxilio no Problema;
 * Criou 2 Personas;
 * Editou o video;
 * Entrega do trabalho.
