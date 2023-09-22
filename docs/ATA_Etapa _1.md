@@ -55,4 +55,6 @@ Luis Gustavo:
 * Listei as restrições das espicificações do projeto;
 * Realizei a apresentação de duas personas e as considerações finais no video da parte 1.
 
-
+Arthur
+* Realizei a criação de uma Persona para o projeto, sendo ela o Cléber que era motorista de van escolar.
+* No vídeo realizado pelo grupo, eu apresentei a parte do público alvo do nosso projeto.
