@@ -44,3 +44,14 @@ FERNANDO:
 * Editou o video;
 * Entrega do trabalho.
 
+
+Luis Gustavo: 
+* Realizei a criação de uma justificativa e os problemas para a documentação;
+* Organizei as reuniões onlines;
+* Organizei os pontos e orientações nas reuniões onlines;
+* Contribui na criação de personas;
+* Criei um esboço dos slides da aprensentação;
+* Listei as restrições das espicificações do projeto;
+* Realizei a apresentação de duas personas e as considerações finais no video da parte 1.
+
+
