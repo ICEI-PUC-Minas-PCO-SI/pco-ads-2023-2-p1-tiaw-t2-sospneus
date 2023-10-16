@@ -27,73 +27,49 @@
 
 <div class="container">
     <h2>Cadastro de Usuário - Borracharia</h2>
-    <div class="centered-form">
-        <form>
-            <table class="form-table">
-                <tr>
-                    <td>
-                        <label for="nome">Nome:</label>
-                    </td>
-                    <td>
-                        <input type="text" id="nome" name="nome" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="telefone">Telefone:</label>
-                    </td>
-                    <td>
-                        <input type="tel" id="telefone" name="telefone" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="email">E-mail:</label>
-                    </td>
-                    <td>
-                        <input type="text" id="email" name="email" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="cep">CEP:</label>
-                    </td>
-                    <td>
-                        <input type="text" id="cep" name="cep" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="rua">Rua:</label>
-                    </td>
-                    <td>
-                        <input type="text" id="rua" name = "rua" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="bairro">Bairro:</label>
-                    </td>
-                    <td>
-                        <input type="text" id="bairro" name="bairro" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="cidade">Cidade:</label>
-                    </td>
-                    <td>
-                        <input type="text" id="cidade" name="cidade" required>
-                    </td>
-                </tr>
-            </table>
-            <div class="button-container">
-                <input type="submit" value="Cadastrar">
+    <div class="container">
+        <div class="row justify-content-center mt-5 mb-3">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="nome" name="nome">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="text" class="form-control" id="email" name="Email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefone" class="form-label">Telefone</label>
+                                <input type="tel" class="form-control" id="telefone" name="telefone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="cep" class="form-label">Cep</label>
+                                <input type="text" class="form-control" id="cep" name="cep">
+                            </div>
+                            <div class="mb-3">
+                                <label for="rua" class="form-label">Rua</label>
+                                <input type="text" class="form-control" id="rua" name="rua">
+                            </div>
+                            <div class="mb-3">
+                                <label for="bairro" class="form-label">Bairro</label>
+                                <input type="text" class="form-control" id="bairro" name="bairro">
+                            </div>
+                            <div class="mb-3">
+                                <label for="cidade" class="form-label">Cidade</label>
+                                <input type="text" class="form-control" id="cidade" name="cidade">
+                            </div>
+                            <button type="button" class="btn btn-primary">Cadastrar</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </form>
+        </div>
+    </div>
 
     </div>
-</div>
 
 <footer class="bg-dark text-light text-center py-3">
     <p>&copy; 2023 S.O.S. Pneus. Todos os direitos reservados.</p>
