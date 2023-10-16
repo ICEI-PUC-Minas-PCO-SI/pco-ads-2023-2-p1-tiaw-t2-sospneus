@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>S.O.S. Pneus</title>
+</head>
+
+
+<body>
+    <header class="header">
+        <div class="container-fluid">
+            <img src="Img/img_SOS.jpg" width="100" height="100" class="rounded-circle" alt="Logo">
+            <h1> Histórico </h1>
+            <div class="btn-group">
+                <a class="btn btn-primary m-3" href="#" role="button">Home</a>
+                <button class="btn btn-primary m-3">Histórico</button>
+                <input class="btn btn-primary m-3" type="button" value="Notificações" />
+            </div>
+            <button class="btn btn-primary m-3">Sair</button>
+        </div>
+    </header>
+
+    <div class="container mt-4">
+        <div class="input-group">
+            <label for="tipoUsuario" class="form-label">Selecione um período:</label>
+            <select class="form-select" aria-label="Tipo de Usuário" id="tipoUsuario" name="tipoUsuario">
+                <option selected disabled>Escolha uma opção</option>
+                <option value="3dias">Últimos 3 dias</option>
+                <option value="7dias">Últimos 7 dias</option>
+                <option value="30dias">Últimos 30 dias</option>
+                <option value="dataEspecifica">Data específica</option>
+            </select>
+
+            <button class="btn btn-primary search-button">Buscar</button>
+        </div>
+
+        <table class="history-table">
+            <thead>
+                <tr>
+                    <th>Data da Pesquisa</th>
+                    <th>Termo Pesquisado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01/10/2023</td>
+                    <td>Pneus para carros</td>
+                </tr>
+                <tr>
+                    <td>28/09/2023</td>
+                    <td>Reparo de pneus de moto</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+  
+</body>
+<footer class="bg-dark text-light text-center py-2">
+    <p>&copy; 2023 S.O.S. Pneus. Todos os direitos reservados.</p>
+</footer>
+
+
+</html>
