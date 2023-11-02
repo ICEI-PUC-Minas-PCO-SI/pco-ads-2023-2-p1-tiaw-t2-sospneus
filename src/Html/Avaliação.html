@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>S.O.S. Pneus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 1rem 0;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 2rem;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+
+        .btn-container {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="text-center">
+        <div class="container">
+            <img src="Logotipo.jpg" class="logo" alt="Logo" />
+            <h1>Avaliação</h1>
+            <a class="btn btn-primary m-3" href="#" role="button">Home</a>
+            <button class="btn btn-primary m-3">Histórico</button>
+            <input class="btn btn-primary m-3" type="button" value="Notificações" />
+            <a href="Login.html">
+                <button class="btn btn-primary m-3">Sair</button>
+            </a>
+    </header>
+
+
+
+
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Deixe aqui sua avaliação</h1>
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <form id="formulario">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome:</label>
+                        <input type="text" class="form-control" id="nome" name="nome" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="data" class="form-label">Data:</label>
+                        <input type="date" class="form-control" id="data" name="data" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="comentario" class="form-label">Comentário:</label>
+                        <textarea class="form-control" id="comentario" name="comentario" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Avaliação</button>
+                </form>
+            </div>
+        </div>
+
+        <hr class="my-3">
+
+        <h2 class="mb-2">Comentários feitos por alguns clientes:</h2>
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="avaliacao">
+                    <div class="avaliacao" id="avaliacao1">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                            viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                        </svg>
+                        <div class="nome-cliente">João da Silva</div>
+                        <div class="data">02/11/2023</div>
+                        <div class="comentario">
+                            <p>Ótimo produto! Estou muito satisfeito com a compra.</p>
+                        </div>
+                        <div class="icones-comentario">
+                            <i class="fa fa-star" style="color: #ffd500;"></i>
+                            <i class="fa fa-star" style="color: #ffd500;"></i>
+                            <i class="fa fa-star" style="color: #ffd500;"></i>
+                            <i class="fa fa-star" style="color: #ffd500;"></i>
+                            <i class="fa fa-star" style="color: #ffd500;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class "avaliacao">
+                    <div class="avaliacao" id="avaliacao2">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                            viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                        </svg>
+                        <div class="nome-cliente">Oclenis Vasconcelos</div>
+                        <div class="data">15/09/2023</div>
+                        <div class="comentario">
+                            <p>Ótimo atendimento, fácil acesso. Perfeito para pessoas da terceira idade.</p>
+                        </div>
+                        <div class="icones-comentario">
+                            <i class="fa fa-star" style="color: #ffd500;"></i>
+                            <i class="fa fa-star" style="color: #ffd500;"></i>
+                            <i class="fa fa-star" style="color: #ffd500;"></i>
+                            <i class="fa fa-star" style="color: #ffd500;"></i>
+                            <i class="fa fa-star" style="color: #ffd500;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class "avaliação">
+                    <div class="avaliacao" id="avaliacao3">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                            viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                        </svg>
+                        <div class="nome-cliente">Marilda Silvana</div>
+                        <div class="data">02/11/2023</div>
+                        <div class="comentario">
+                            <p>Excelente serviço e muito fácil fazer o pedido S.O.S, pena que o borracheiro sujou meu
+                                carro, mas excelente plataforma.</p>
+                        </div>
+                        <div class="icones-comentario">
+                            <i class="fa fa-star" style="color: #ffd500;"></i>
+                            <i class="fa fa-star" style="color: #ffd500;"></i>
+                            <i class="fa fa-star" style="color: #ffd500;"></i>
+                            <i class="fa fa-star" style="color: #ffd500;"></i>
+                            <i class="fa fa-star" style="color: black;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <div class="container">
+            &copy; 2023 S.O.S. Pneus. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
