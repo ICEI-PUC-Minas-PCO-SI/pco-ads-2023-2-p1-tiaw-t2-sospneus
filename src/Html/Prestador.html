@@ -1,65 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-      <link rel="stylesheet" href="style.css">
-    <title>S.O.S. Pneus</title>
-  </head>
-
-  <header class="header">
-    <img src="Img/img_SOS.jpg" class="logo" alt="Logo" />
-    <h1>Home Prestador</h1>
-    <a class="btn btn-primary m-3" href="#" role="button">Home</a>
-    <button class="btn btn-primary m-3">Histórico</button>
-    <input class="btn btn-primary m-3" type="button" value="Notificações" />
-    <button class="btn btn-primary m-3">Sair</button>
-  </header>
-
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css"
-  />
-<body>
-<div class="form-container">
-    <select class="form-select" aria-label="Default select example" id="online-offline-select">
-        <option selected>Selecione uma opção</option>
-        <option value="online">Online</option>
-        <option value="offline">Offline</option>
-    </select>
-
-    <div class="checkbox-container">
-        <div class="checkbox">
-            <i class="fa fa-check"></i>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>SOS-PNEUS</title>
+</head>
+<body>    
+    <div class="top-bar">                
+        <header class="header">
+            <img class="logo" src="img/Logo.PNG" alt="Logo">
+            <h1>Home Prestador</h1>
+            <div>
+            <button class="btn btn-primary m-3" href="#" role="button">Home</button>
+            <button class="btn btn-primary m-3">Histórico</button>
+            <button class="btn btn-primary m-3">Notificações</button>                        
+            <a href="Principal.html">
+                <button class="btn btn-primary m-3">Sair</button>
+            </a>
         </div>
-        Possíveis clientes encontrados
+          </header>
     </div>
-</div>
+    <div class="content">    
+            <select class="status-dropdown">
+                <option value="offline">Offline</option>
+                <option value="online">Online</option>                
+            </select>
+            <div id="lista-online" class="hidden">
+                <ul>                                      
+                    <h1>Relação de Clientes aguardando</h1>
+                    <table>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Distância</th>
+                            <th>Veículo</th>
+                            <th>Espera</th>
+                        </tr>
+                        <tr>
+                            <td>João</td> 
+                            <td>25 km</td>
+                            <td>Palio</td>
+                            <th>00:15</th>
+                            <td><button class="item-button" id="button-1">Visualizar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Maria</td>
+                            <td>30 km</td>
+                            <td>Gol</td>
+                            <th>00:10</th>
+                            <td><button class="item-button" id="button-2">Visualizar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Carlos</td>
+                            <td>22 km</td>
+                            <td>Honda Civic</td>
+                            <th>00:05</th>
+                            <td><button class="item-button" id="button-3">Visualizar</button></td>
+                        </tr>
+                    </table>
 
-<div class="footer">
-    &copy; 2023 S.O.S. Pneus. Todos os direitos reservados.
-</div>
+                </ul>
+            </div>        
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"></script>
-<script>
-    const select = document.getElementById("online-offline-select");
-    const checkbox = document.querySelector(".checkbox");
-
-    select.addEventListener("change", function () {
-        if (select.value === "online") {
-            checkbox.classList.add("selected");
-        } else {
-            checkbox.classList.remove("selected");
-        }
-    });
-</script>
+    </div>
+    <div class="bar-footer">
+        <br>        
+        <footer class="bg-dark text-light text-center py-2">
+            <p>&copy; 2023 S.O.S. Pneus. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    
 </body>
 </html>
