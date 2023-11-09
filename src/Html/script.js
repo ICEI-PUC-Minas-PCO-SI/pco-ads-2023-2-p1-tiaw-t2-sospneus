@@ -35,4 +35,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Adicione o código para iniciar a conversa aqui
         alert("Conversa iniciada!"); // Um exemplo de ação ao clicar no botão
     });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 03da7b7007bdbd319427171e01c06cb74a5a9672
