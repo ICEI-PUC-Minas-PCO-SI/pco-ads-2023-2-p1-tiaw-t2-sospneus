@@ -26,8 +26,3 @@ Fortalecer a economia local.
 Nosso publico alvo são as pessoas que possuem pouco conhecimento e com pouca disposição para a troca de pneus, com isso criamos esse app para fazer a ligação entre o cliente e o borracheiro.
 Imagine que você está indo para um compromisso super importante seu pneu fura e você não pode se sujar ou não tem a pratica de realizar a troca. A primeira opção seria acionar a seguradora, porem teria que fazer um chamado e levaria horas para a troca do pneu se realizar, por isso criamos esse app para facilitar a vida do motorista, poupando tempo e fazendo com que os comercios locais cresçam.
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
