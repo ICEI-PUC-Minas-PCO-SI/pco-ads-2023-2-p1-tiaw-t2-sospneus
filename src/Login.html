@@ -1,43 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>S.O.S. Pneus</title>
-</head>
-<body>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        margin-bottom: 150px;
+      }
+
+      footer {
+        margin-top: auto;
+        margin-top: 150px;
+      }
+
+      .container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .form-container {
+        max-width: 400px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
     <header class="text-center">
-        <div class="container">
-            <img src="Img/img_SOS.jpg" alt="Logo" class="logo">
-            <h1>LOGIN</h1>
-        </div>
+      <div class="container">
+        <a href="Index.html">
+          <img src="img SOS.jpg" alt="Logo" class="logo" />
+        </a>
+        <h1>LOGIN</h1>
+      </div>
     </header>
 
     <div class="container form-container">
-        <form>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">USUÁRIO</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">SENHA</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">MANTER CONECTADO</label>
-            </div>
-            <div class="btn-container">
-                <button type="submit" class="btn btn-primary btn-block">LOGAR</button>
-                <a href="#" class="btn btn-link btn-block">NÃO POSSUI LOGIN? CLIQUE AQUI</a>
-            </div>
-        </form>
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">USUÁRIO</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">SENHA</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+          />
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1"
+            >MANTER CONECTADO</label
+          >
+        </div>
+        <div class="btn-container">
+          <button type="submit" class="btn btn-primary btn-block">LOGAR</button>
+          <a href="cadastro.html" class="btn btn-link btn-block">
+            NÃO POSSUI LOGIN? CLIQUE AQUI</a
+          >
+        </div>
+      </form>
     </div>
     <footer class="bg-dark text-light text-center py-3">
-        <p>&copy; 2023 S.O.S. Pneus. Todos os direitos reservados.</p>
+      <p>&copy; 2023 S.O.S. Pneus. Todos os direitos reservados.</p>
     </footer>
-</body>
+  </body>
 </html>

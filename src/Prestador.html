@@ -1,75 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style1.css" />
     <script src="script.js" defer></script>
     <title>SOS-PNEUS</title>
-</head>
-<body>    
-    <div class="top-bar">                
-        <header class="header">
-            <img class="logo" src="img/Logo.PNG" alt="Logo">
-            <h1>Home Prestador</h1>
-            <div>
-            <button class="btn btn-primary m-3" href="#" role="button">Home</button>
-            <button class="btn btn-primary m-3">Histórico</button>
-            <button class="btn btn-primary m-3">Notificações</button>                        
-            <a href="Principal.html">
-                <button class="btn btn-primary m-3">Sair</button>
-            </a>
+  </head>
+  <body>
+    <div class="top-bar">
+      <header class="header">
+        <a href="Index.html">
+        <img class="logo" src="img SOS.jpg" alt="Logo" />
+      </a>
+        <h1>Home Prestador</h1>
+        <div>
+          </button>
+          <button class="btn btn-primary m-3">Histórico</button>
+          <button class="btn btn-primary m-3">Notificações</button>
         </div>
-          </header>
+      </header>
     </div>
-    <div class="content">    
-            <select class="status-dropdown">
-                <option value="offline">Offline</option>
-                <option value="online">Online</option>                
-            </select>
-            <div id="lista-online" class="hidden">
-                <ul>                                      
-                    <h1>Relação de Clientes aguardando</h1>
-                    <table>
-                        <tr>
-                            <th>Nome</th>
-                            <th>Distância</th>
-                            <th>Veículo</th>
-                            <th>Espera</th>
-                        </tr>
-                        <tr>
-                            <td>João</td> 
-                            <td>25 km</td>
-                            <td>Palio</td>
-                            <th>00:15</th>
-                            <td><button class="item-button" id="button-1">Visualizar</button></td>
-                        </tr>
-                        <tr>
-                            <td>Maria</td>
-                            <td>30 km</td>
-                            <td>Gol</td>
-                            <th>00:10</th>
-                            <td><button class="item-button" id="button-2">Visualizar</button></td>
-                        </tr>
-                        <tr>
-                            <td>Carlos</td>
-                            <td>22 km</td>
-                            <td>Honda Civic</td>
-                            <th>00:05</th>
-                            <td><button class="item-button" id="button-3">Visualizar</button></td>
-                        </tr>
-                    </table>
-
-                </ul>
-            </div>        
-
+    <div class="content">
+      <select class="status-dropdown">
+        <option value="offline">Offline</option>
+        <option value="online">Online</option>
+      </select>
+      <div id="lista-online" class="hidden">
+        <ul>
+          <h1>Relação de Clientes aguardando</h1>
+          <table>
+            <tr>
+              <th>Nome</th>
+              <th>Distância</th>
+              <th>Veículo</th>
+              <th>Espera</th>
+            </tr>
+            <tr>
+              <td>João</td>
+              <td>25 km</td>
+              <td>Palio</td>
+              <th>00:15</th>
+              <td>
+                <button class="item-button" id="button-1">Visualizar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Maria</td>
+              <td>30 km</td>
+              <td>Gol</td>
+              <th>00:10</th>
+              <td>
+                <button class="item-button" id="button-2">Visualizar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Carlos</td>
+              <td>22 km</td>
+              <td>Honda Civic</td>
+              <th>00:05</th>
+              <td>
+                <button class="item-button" id="button-3">Visualizar</button>
+              </td>
+            </tr>
+          </table>
+        </ul>
+      </div>
     </div>
     <div class="bar-footer">
-        <br>        
-        <footer class="bg-dark text-light text-center py-2">
-            <p>&copy; 2023 S.O.S. Pneus. Todos os direitos reservados.</p>
-        </footer>
+      <br />
+      <footer class="bg-dark text-light text-center py-2">
+        <p>&copy; 2023 S.O.S. Pneus. Todos os direitos reservados.</p>
+      </footer>
     </div>
-    
-</body>
+  </body>
 </html>
