@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>S.O.S. Pneus</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="Index.html">
+        <img src="img SOS.jpg" class="logo" alt="Logo" />
+      </a>
+      <h1>Home Cliente</h1>
+      <button class="btn btn-primary m-3">Histórico</button>
+      <input class="btn btn-primary m-3" type="button" value="Notificações" />
+    </header>
+
+    <main>
+      <div class="container mt-4">
+        <div class="input-group">
+          <select
+            class="form-select"
+            aria-label="Tipo de Usuário"
+            id="tipoUsuario"
+            name="tipoUsuario"
+          >
+            <option selected disabled>Escolha uma opção</option>
+            <option value="3dias">Últimos 3 dias</option>
+            <option value="7dias">Últimos 7 dias</option>
+            <option value="30dias">Últimos 30 dias</option>
+            <option value="dataEspecifica">Data específica</option>
+          </select>
+
+          <button id="btnBuscar" class="p-2 btn btn-primary m-3">Buscar</button>
+        </div>
+
+        <table class="table">
+          <thead class="table-dark">
+            <tr>
+              <th>Data da Pesquisa</th>
+              <th>Termo Pesquisado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>01/10/2023</td>
+              <td>Pneus para carros</td>
+            </tr>
+            <tr>
+              <td>28/09/2023</td>
+              <td>Reparo de pneus de moto</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-light text-center py-2">
+      <p>&copy; 2023 S.O.S. Pneus. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="seu-script.js"></script>
+  </body>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+    }
+  </style>
+</html>
