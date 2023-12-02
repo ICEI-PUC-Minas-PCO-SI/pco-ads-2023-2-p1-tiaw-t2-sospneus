@@ -20,15 +20,19 @@
         min-height: 100vh;
         margin: 0;
         padding: 0;
+        padding-top: 300px; /* Adiciona um preenchimento superior igual à altura do header fixo */
       }
 
       header {
-        margin-bottom: 150px;
+        position: fixed;
+        width: 100%;
+        top: 0;
       }
 
       footer {
-        margin-top: auto;
-        margin-top: 150px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
       }
 
       .container {
@@ -36,11 +40,13 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
       }
 
       .form-container {
         max-width: 400px;
         margin: auto;
+        margin-bottom: 200px;
       }
     </style>
   </head>
@@ -55,7 +61,7 @@
     </header>
 
     <div class="container form-container">
-      <form>
+      <form action="/seu-endereco-de-login" method="post">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">USUÁRIO</label>
           <input
@@ -63,6 +69,7 @@
             class="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
+            name="username"
           />
         </div>
         <div class="mb-3">
@@ -71,6 +78,7 @@
             type="password"
             class="form-control"
             id="exampleInputPassword1"
+            name="password"
           />
         </div>
         <div class="mb-3 form-check">
@@ -82,8 +90,8 @@
         <div class="btn-container">
           <button type="submit" class="btn btn-primary btn-block">LOGAR</button>
           <a href="cadastro.html" class="btn btn-link btn-block">
-            NÃO POSSUI LOGIN? CLIQUE AQUI</a
-          >
+            NÃO POSSUI LOGIN? CLIQUE AQUI
+          </a>
         </div>
       </form>
     </div>
