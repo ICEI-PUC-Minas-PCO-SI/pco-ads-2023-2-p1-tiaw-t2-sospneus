@@ -2,7 +2,7 @@ Matheus:
 
 * Participei da reunião do dia 25/11/23;
 * Fiquei responsável pela aplicação do java script, JSON,Local Storage e AJAX, nas paginas de Interação e Pré-interação;
-* Estilizei e atualizei os códigos de Interação e Pré Interação,usando JavaScript;
+* Estilizei e atualizei os códigos de Interação e Pré-interação,usando JavaScript;
 
 
 Davi:
