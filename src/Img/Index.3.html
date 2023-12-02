@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Links -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <title>Tour Estadios</title>
+
+  </head>
+  <!-- Inicio do Cabeçalho -->
+ 
+  <div id="cabecalho">
+    <header class="bg-dark text-light p-3">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+          <h1 class="fs-3 fw-bold">Tour Estadios</h1>
+          <button class="btn btn-light d-sm-none bg-danger text-light" data-toggle="collapse" data-target="#navbarLinks">Menu</button>
+          <div class="d-none d-sm-block">
+              <ul class="nav">
+                  <li class="nav-item">
+                      <a class="nav-link text-light" href="#">Link 1</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-light" href="#">Link 2</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-light" href="#">Link 3</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </header>
+  <div class="collapse d-sm-none" id="navbarLinks">
+      <ul class="nav flex-column">
+          <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Link 1</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Link 2</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Link 3</a>
+          </li>
+      </ul>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</header>
+
+<!-- Carousel -->
+<body>
+<div id="Destaque" class="m-1">
+  <h3 class="border-bottom border-dark border-3">Destaque</h3>
+</div>
+<div class="container">
+  <div class="row justify-content-center">
+      <div id="carouselExampleCaptions" class="carousel slide col-lg-12" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img src="assets_img_img1.jpg/img_Mineirao.jpg" class="d-block w-100" alt="img">
+                  <div class="carousel-caption d-none d-md-block">
+                      <h3>MINEIRÃO</h3>
+                      <p>A casa do Cruzeiro.</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <img src="assets_img_img1.jpg/img_independ.jpg" class="d-block w-100" alt="img">
+                  <div class="carousel-caption d-none d-md-block">
+                      <h3>INDEPENDENCIA</h3>
+                      <p>A casa do America MG.</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <img src="assets_img_img1.jpg/img_arena.webp" class="d-block w-100" alt="img">
+                  <div class="carousel-caption d-none d-md-block">
+                      <h3>ARENA MRV</h3>
+                      <p>A casa do Atlético MG.</p>
+                  </div>
+              </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+      </div>
+  </div>
+</div>
+    
+<div id="Mapa" class="m-1">
+  <h3 class="border-bottom border-dark border-3">Mapa</h3>
+</div>
+<div class="container">
+  <div class="row justify-content-center">
+      <div class="col-lg-12">
+          <div class="embed-responsive embed-responsive-16by9">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120048.59795757699!2d-44.04662274608247!3d-19.90253583914758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa690cacacf2c33%3A0x5b35795e3ad23997!2sBelo%20Horizonte%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1694258462357!5m2!1spt-BR!2sbr" 
+                  width="100%"
+                  height="500"
+                  class="embed-responsive-item"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+          </div>
+      </div>
+  </div>
+</div>
+  
+  <!-- Inicio do Album -->
+      <div id="Album"class="m-1">
+        <h3 class="border-bottom border-dark border-3">Album</h3>
+      </div>
+      <div class="container-fluid">
+        <section id="conteudo" class="container mt-5">
+        <div class="row">
+            <div class="col-md-3">
+              <div class="card mb-3">
+                <a href="Minei.html">
+                <img src="assets_img_img1.jpg/img_Mineirao.jpg" alt="" class="card-img-top" />
+              </a>
+                <div class="card-body">
+                  <h5 class="card-title item">MINEIRÃO</h5>
+                  <p class="card-text">TIME: Cruzeiro</p>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-3">
+              <div class="card mb-3">
+                <a href="Indepa.html">
+                <img src="assets_img_img1.jpg/img_independ.jpg" alt="" class="card-img-top" />
+              </a>
+                <div class="card-body">
+                  <h5 class="card-title item">INDEPENDENCIA</h5>
+                  <p class="card-text">TIME:América MG</p>               
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-3">
+              <div class="card mb-3">
+                <a href="Arena.html">
+                <img src="assets_img_img1.jpg/img_arena.webp" alt="" class="card-img-top" />
+              </a>
+                <div class="card-body">
+                  <h5 class="card-title item">ARENA MRV</h5>
+                  <p class="card-text">TIME: Atletico MG</p>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-3">
+                  <a href="Maraca.html">
+                  <img src="assets_img_img1.jpg/img_maracana.webp" alt="" class="card-img-top" />
+                </a>
+                  <div class="card-body">
+                    <h5 class="card-title item">MARACANÃ</h5>
+                    <p class="card-text">TIME: Flamengo</p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-md-3">
+                <div class="card mb-3">
+                  <a href="Allianz.html">
+                  <img src="assets_img_img1.jpg/img_allianz.jpg" alt="" class="card-img-top" />
+                </a>
+                  <div class="card-body">
+                    <h5 class="card-title item">ALLIANZ PARK</h5>
+                    <p class="card-text">TIME: Palmeiras</p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-md-3">
+                <div class="card mb-3">
+                  <a href="Baixada.html">
+                  <img src="assets_img_img1.jpg/img_arenadabaixada.jpg" class="card-img-top" />
+                </a>
+                  <div class="card-body">
+                    <h5 class="card-title item">ARENA DA BAIXADA</h5>
+                    <p class="card-text">TIME: Athletico PR</p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-md-3">
+                <div class="card mb-3">
+                  <a href="Morumbi.html">
+                  <img src="assets_img_img1.jpg/img_morumbi.jpg" alt="" class="card-img-top" />
+                </a>
+                  <div class="card-body">
+                    <h5 class="card-title item">MORUMBI</h5>
+                    <p class="card-text">TIME: São Paulo</p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-md-3">
+                <div class="card mb-3">
+                  <a href="Beria.html">
+                  <img src="assets_img_img1.jpg/img_beira rio.jpg" alt="" class="card-img-top" />
+                </a>
+                  <div class="card-body">
+                    <h5 class="card-title item">BEIRA RIO</h5>
+                    <p class="card-text">TIME: Internacional</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+  </section>
+    </body>
+
+    <!-- Rodapé -->
+    <footer>
+      <div id="Crédito" class="m-1">
+          <h3 class="border-bottom border-dark border-3">Crédito</h3>
+      </div>
+  
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-6">
+                  <div class="Autoria m-2">
+                      <h4 class="text-primary">Sobre</h4>
+                      <p>Minha página aborda estádios brasileiros, destacando suas histórias, arquitetura e a importância no cenário esportivo. Explore diversos estádios icônicos do Brasil, incluindo o Maracanã, o Mineirão, o Morumbi e muito mais. Descubra as lendas que fizeram história nesses palcos emocionantes do futebol brasileiro.</p>
+                  </div>
+              </div>
+              <div class="col-lg-6">
+                  <div class="card mb-3 bg" style="width: 100%;">
+                      <div class="row g-0">
+                          <div class="col-md-3">
+                              <img src="assets_img_img1.jpg/Alexandre Perfil.jpeg" class="img-fluid rounded-start" alt="img">
+                          </div>
+                          <div class="col-md-9"> 
+                              <div class="card-body">
+                                  <h5 class="card-title text-primary">Autoria</h5>
+                                  <p class="card-text">Aluno: Alexandre Assis Martins</p>
+                                  <p class="card-text">Curso: Análise e Desenvolvimento de Sistemas </p>
+                                  <p class="card-text">Turno: Noite</p>
+                               
+                                  <p class="card-title"><small class="text-primary">REDES SOCIAIS:</small></p>
+                                  <i class="bi bi-facebook"></i>
+                                  <i class="bi bi-instagram"></i>
+                                  <i class="bi bi-github"></i>
+                                  <i class="bi bi-twitter"></i>
+                                </footer>
+
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div> 
+</html>
