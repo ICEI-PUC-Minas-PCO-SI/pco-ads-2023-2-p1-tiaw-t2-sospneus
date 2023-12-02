@@ -31,7 +31,6 @@
             <textarea class="form-control message-input border-2" placeholder="Digite sua mensagem"></textarea>
         </div>
         <div class="send-button">
-            
             <button class="btn btn-primary" id="encerrarAtendimento">Encerrar</button>
         </div>
     </div>
@@ -48,7 +47,13 @@
             alert('O atendimento continuará em aberto...');
         } else {
             var secondConfirmation = confirm('Atendimento encerrado com sucesso!');
-            
+            if (secondConfirmation) {
+                var thirdConfirmation = confirm('Deseja realizar uma avaliação?');
+                if (thirdConfirmation) {
+                    
+                    window.location.href = 'preencher com a pagina';
+                }
+            }
         }
     });
 </script>
