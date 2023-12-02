@@ -25,6 +25,7 @@ O aplicativo o salvaria neste tipo de situação,pelo fato de que com apenas um 
 
 * Felipe Anderson, tem 25 anos ele é Tecnico Químico. Ele se desloca em media 30 km por dia para ir para o trabalho, ele faz esse deslocamento de moto, e muitas das vezes ele esta em locais desconhecidos, e não sabe de borracharias de qualidades e confiaveis. Durante uma trajetoria do seu cotidiano ele depara que um dos seus pneus furaram e que precisa de uma borracharia próxima para realizar a troca ou, que um borracheiro se desloque ate local do ocorrido para realizar a troca do pneu com segurança.
 
+
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
@@ -62,6 +63,20 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-003| O sistema tomara como referência a localização do usuario e do prestador de serviço |   ALTA    |
 |RNF-004| Ocorrera atuaizações de acordo com o Google Maps, para melhor precisão              |   ALTA    |
 
+Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
+
+- [Requisitos Funcionais
+ (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
+ correspondem a uma funcionalidade que deve estar presente na
+  plataforma (ex: cadastro de usuário).
+- [Requisitos Não Funcionais
+  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
+  correspondem a uma característica técnica, seja de usabilidade,
+  desempenho, confiabilidade, segurança ou outro (ex: suporte a
+  dispositivos iOS e Android).
+Lembre-se que cada requisito deve corresponder à uma e somente uma
+característica alvo da sua solução. Além disso, certifique-se de que
+todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 ## Restrições
 

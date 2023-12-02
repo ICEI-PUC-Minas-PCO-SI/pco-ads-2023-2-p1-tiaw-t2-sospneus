@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    >
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
+    <title>S.O.S. Pneus</title>
+</head>
+
+<body style="display: flex; flex-direction: column; justify-content: space-between; min-height: 100vh; margin: 0;">
+<header class="header">
+    <img src="Img/img_SOS.jpg" class="logo" alt="Logo" />
+    <h1>Home Cliente</h1>
+    <a class="btn btn-primary m-3" href="#" role="button">Home</a>
+    <button class="btn btn-primary m-3">Histórico</button>
+    <input class="btn btn-primary m-3" type="button" value="Notificações" />
+</header>
+
+<div class="container mt-4" style="flex: 2; display: flex; justify-content: center; align-items: center;">
+    <div class="outer-chat-box border-2">
+        <div class="inner-chat-box">
+            <textarea class="form-control message-input border-2" placeholder="Digite sua mensagem"></textarea>
+        </div>
+        <div class="send-button">
+            
+            <button class="btn btn-primary" id="encerrarAtendimento">Encerrar</button>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-dark text-light text-center py-2">
+    <p>&copy; 2023 S.O.S. Pneus. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    document.getElementById('encerrarAtendimento').addEventListener('click', function() {
+        var confirmation = confirm('Tem certeza que deseja encerrar o atendimento?');
+        if (!confirmation) {
+            alert('O atendimento continuará em aberto...');
+        } else {
+            var secondConfirmation = confirm('Atendimento encerrado com sucesso!');
+            
+        }
+    });
+</script>
+
+</body>
+
+</html>
