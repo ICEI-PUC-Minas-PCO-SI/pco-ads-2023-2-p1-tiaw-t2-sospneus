@@ -1,6 +1,7 @@
 Matheus:
+
 * Realizei a criação da pagina de pré-interação:
-utilizando javascript no html da página
+*Estilizei o código da página de pré-interação,utilizando javascript no html da página;
 
 Davi:
 * 
