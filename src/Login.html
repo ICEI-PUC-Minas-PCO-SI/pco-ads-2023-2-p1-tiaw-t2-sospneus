@@ -61,9 +61,9 @@
     </header>
 
     <div class="container form-container">
-      <form action="/seu-endereco-de-login" method="post">
+      <form id="loginForm" method="post">
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">USUÁRIO</label>
+          <label for="exampleInputEmail1" class="form-label">E-mail</label>
           <input
             type="email"
             class="form-control"
@@ -73,7 +73,7 @@
           />
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">SENHA</label>
+          <label for="exampleInputPassword1" class="form-label">Senha</label>
           <input
             type="password"
             class="form-control"
@@ -98,5 +98,44 @@
     <footer class="bg-dark text-light text-center py-3">
       <p>&copy; 2023 S.O.S. Pneus. Todos os direitos reservados.</p>
     </footer>
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const formData = new FormData(this);
+          const email = formData.get("username");
+          const senha = formData.get("password");
+
+          try {
+            (async () => {
+              const response = await fetch("http://localhost:3000/api/login", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  "E-mail": email,
+                  Senha: senha,
+                }),
+              });
+
+              const data = await response.json();
+              console.log("Resposta do servidor:", data);
+
+              if (data.redirectTo) {
+                window.location.href = `${data.redirectTo}?id=${
+                  data.id
+                }&nome=${encodeURIComponent(
+                  data.nome
+                )}&email=${encodeURIComponent(data.email)}`;
+              }
+            })();
+          } catch (error) {
+            console.error("Erro ao fazer login:", error);
+          }
+        });
+    </script>
   </body>
 </html>

@@ -64,6 +64,11 @@
       footer {
         margin-top: auto;
       }
+
+      /* Adiciona estilo para esconder/mostrar os campos de senha, confirmar senha e CNPJ */
+      .hidden {
+        display: none;
+      }
     </style>
   </head>
 
@@ -115,11 +120,33 @@
             />
           </div>
           <div class="form-group">
-            <label for="email">E-mail:</label>
+            <label for="email">*E-mail:</label>
             <input
               type="email"
               id="email"
               name="email"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <!-- Campos de senha e confirmar senha -->
+          <div class="form-group">
+            <label for="senha">*Senha:</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="confirmarSenha">*Confirmar Senha:</label>
+            <input
+              type="password"
+              id="confirmarSenha"
+              name="confirmarSenha"
               class="form-control"
               required
             />
@@ -178,10 +205,10 @@
               required
             />
           </div>
-          <div class="form-group">
-            <label for="cnpj"
-              >CNPJ*(Campo obrigatório para prestador de serviço):</label
-            >
+
+          <!-- Campo CNPJ (visível apenas para prestador) -->
+          <div class="form-group hidden" id="cnpjGroup">
+            <label for="cnpj">CNPJ:</label>
             <input
               type="text"
               id="cnpj"
@@ -230,6 +257,69 @@
       <p>&copy; 2023 S.O.S. Pneus. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+
+    <script>
+      document
+        .getElementById("tipoUsuario")
+        .addEventListener("change", function () {
+          var tipoUsuario = this.value;
+          var cnpjGroup = document.getElementById("cnpjGroup");
+          var cnpjInput = document.getElementById("cnpj");
+
+          if (tipoUsuario === "prestador") {
+            cnpjGroup.classList.remove("hidden");
+            cnpjInput.removeAttribute("disabled");
+          } else {
+            cnpjGroup.classList.add("hidden");
+            cnpjInput.setAttribute("disabled", "disabled");
+          }
+        });
+
+      document
+        .getElementById("cadastroForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+
+          const formData = new FormData(this);
+          const tipoUsuario = formData.get("tipoUsuario");
+
+          // Remove o campo CNPJ se o tipo de usuário for "cliente"
+          if (tipoUsuario === "cliente") {
+            formData.delete("cnpj");
+          }
+
+          try {
+            console.log("Antes do envio do formulário:", formData);
+
+            const response = await fetch("http://localhost:3000/usuarios", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(Object.fromEntries(formData)),
+            });
+
+            console.log("Após a resposta do servidor:", response);
+
+            if (!response.ok) {
+              throw new Error(
+                `Erro na requisição: ${response.status} ${response.statusText}`
+              );
+            }
+
+            const data = await response.json();
+            console.log("Cadastro realizado com sucesso:", data);
+
+            // Aqui você pode usar 'data' para redirecionar
+            const queryString = `?id=${data.id}&nome=${encodeURIComponent(
+              data.nome
+            )}&email=${encodeURIComponent(data.email)}`;
+            window.location.href = `cliente.html${queryString}`;
+          } catch (error) {
+            console.error("Erro ao cadastrar:", error);
+          }
+        });
+    </script>
   </body>
 </html>

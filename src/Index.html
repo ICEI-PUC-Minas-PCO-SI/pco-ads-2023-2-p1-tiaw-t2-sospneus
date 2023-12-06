@@ -33,6 +33,29 @@
 
     <script src="https://kit.fontawesome.com/dad3ff2ba1.js" crossorigin="anonymous"></script>
 
+    <script>
+      // Função para carregar e exibir dados do JSON
+      function loadJSON() {
+          // Caminho para o seu arquivo JSON
+          const jsonPath = "db.json";
+
+          // Realiza uma requisição para obter o arquivo JSON
+          fetch(jsonPath)
+              .then(response => response.json())
+              .then(data => {
+                  // Converte os dados JSON em uma string formatada e exibe na página
+                  const jsonDataString = JSON.stringify(data, null, 2);
+                  document.getElementById('json-data').innerText = jsonDataString;
+              })
+              .catch(error => {
+                  console.error('Erro ao carregar o JSON:', error);
+              });
+      }
+
+      // Chama a função para carregar e exibir o JSON quando a página carregar
+      window.onload = loadJSON;
+  </script>
+
 
     <style>
       
