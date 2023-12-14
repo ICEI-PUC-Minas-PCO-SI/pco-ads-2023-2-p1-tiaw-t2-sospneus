@@ -94,9 +94,9 @@
               <button class="btn btn-primary">Enviar</button>
             </div>
             <div class="evaluation-button">
-              <a href="Avaliação.html">
-                <button class="btn btn-primary">Avaliação</button>
-              </a>
+              <button class="btn btn-primary" onclick="confirmEncerramento()">
+                Encerrar
+              </button>
             </div>
           </div>
         </div>
@@ -106,5 +106,23 @@
     <footer class="bg-dark text-light text-center py-2">
       <p>&copy; 2023 S.O.S. Pneus. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+      function confirmEncerramento() {
+        var confirmacao = confirm(
+          "Você tem certeza que deseja encerrar o serviço?"
+        );
+
+        if (confirmacao) {
+          var avaliacao = confirm(
+            "Faça sua avaliação do serviço prestado. Clique em 'OK' para continuar ou 'Cancelar' para sair."
+          );
+
+          if (avaliacao) {
+            window.location.href = "Avaliação.html";
+          }
+        }
+      }
+    </script>
   </body>
 </html>
