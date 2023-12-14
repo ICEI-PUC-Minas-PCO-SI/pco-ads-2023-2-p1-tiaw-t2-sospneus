@@ -12,48 +12,40 @@
       rel="stylesheet"
     />
     <title>S.O.S. PNEUS</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KyZXEAg3QhqLMpG8r+JKTk5I/G5SJO31GZQABw3Roc1MuFfOt3Bt8k5cZ8va2qIiM"
-      crossorigin="anonymous"
-    />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
-      integrity="sha384-cC2B7lAZ6Dk4u5q9aIEc5Jp5n3z/ZKw5tmYFLEj5I/wnfHdi4k5B5c5A2cofF5xj"
+      src="https://kit.fontawesome.com/dad3ff2ba1.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      function loadJSON() {
+        const jsonPath = "db.json";
 
-   
+        fetch(jsonPath)
+          .then((response) => response.json())
+          .then((data) => {
+            const jsonDataString = JSON.stringify(data, null, 2);
+            document.getElementById("json-data").innerText = jsonDataString;
+          })
+          .catch((error) => {
+            console.error("Erro ao carregar o JSON:", error);
+          });
+      }
+
+      window.onload = loadJSON;
+    </script>
 
     <style>
-      /* Estilo para a barra lateral à esquerda */
       #barralateral {
-        float: left;
-        width: 20%;
-        text-align: center; 
+        text-align: center;
       }
 
-      /* Estilo para o conteúdo à direita */
-      #conteudo {
-        float: left;
-        width: 80%;
-      }
-
-      /* Estilo para o carrossel */
       .carousel {
         margin: 0 auto;
-        width: 95%; /* Ajuste o tamanho conforme necessário */
+        width: 95%;
       }
 
-      /* Estilo para os cards */
       .card-container {
         display: flex;
         flex-wrap: wrap;
@@ -61,27 +53,26 @@
       }
 
       .card {
-        width: 15rem; /* Largura dos cards */
-        margin: 5px; /* Espaço entre os cards */
+        width: 18rem;
+        margin: 5px;
       }
 
       .card img {
-        width: 100%; /* Ajuste o tamanho das imagens nos cards conforme necessário */
-        height: 200px; /* Altura das imagens nos cards */
+        width: 100%;
+        height: 200px;
         object-fit: cover;
       }
+
       #barralateral .btn {
-        width: 80%; /* Largura dos botões ocupando 100% do contêiner pai */
-        height: 50px; /* Altura dos botões (ajuste conforme necessário) */
-        margin-bottom: 30px; /* Espaço inferior entre os botões */
+        width: 80%;
+        height: 50px;
+        margin-bottom: 30px;
       }
-      
     </style>
-    </script>
-    </script>
   </head>
+
   <body>
-    <header class="bg-dark text-light p-3">
+    <header class="bg-dark text-light p-3 navbar">
       <div
         class="container-fluid d-flex justify-content-between align-items-center"
       >
@@ -89,10 +80,9 @@
           src="img SOS.jpg"
           width="100"
           height="100"
-          class="d-inline-block align-top rounded-circle"
+          class="d-inline-block align-top rounded-circle col-12 col-lg-auto"
           alt="Logo"
         />
-        <!-- Barra de pesquisa -->
         <div class="input-group" style="max-width: 700px">
           <input
             type="text"
@@ -102,14 +92,11 @@
             aria-describedby="button-addon2"
           />
           <div class="input-group-append">
-            <!-- Botão de Pesquisar azul -->
             <button class="btn btn-primary" type="button" id="button-addon2">
               Pesquisar
             </button>
-            <!-- Fim do botão de Pesquisar azul -->
           </div>
         </div>
-        <!-- Fim da barra de pesquisa -->
         <div class="d-flex">
           <a
             href="dowload.html"
@@ -118,40 +105,34 @@
             role="button"
             >Download</a
           >
-          <button class="btn btn-primary m-3" type="submit">
-            Configuração
-          </button>
-          <input
-            class="btn btn-primary m-3"
-            type="button"
-            value="Notificações"
-          />
+          <a href="Login.html" class="btn btn-primary m-3">
+            <i class="fa-solid fa-arrow-right-from-bracket fa-bounce"></i> Log
+            Out
+          </a>
         </div>
       </div>
     </header>
 
-    <div class="container mt-5">
+    <div class="container-fluid mt-5">
       <div class="row">
-        <!-- Barra lateral com usuário -->
-        <nav id="barralateral" class="col-lg-3">
+        <nav id="barralateral" class="col-lg-4 col-md-5 col-sm-12">
           <h1 class="marca">Usuario</h1>
           <ul class="list-group">
-            <a href="Login.html">
-              <li class="btn btn-primary m-3" type="button">LOGIN</li>
-            </a>
-            <a href="cadastro.html">
-              <li class="btn btn-primary m-3" type="button">CADASTRO</li>
-            </a>
-            <a href="Historico.html">
-              <li class="btn btn-primary m-3" type="button">HISTÓRICO</li>
-            </a>
-            <a href="Sobre.html">
-              <li class="btn btn-primary m-3" type="button">SOBRE</li>
-            </a>
+            <a href="Login.html"
+              ><li class="btn btn-primary m-3" type="button">LOGIN</li></a
+            >
+            <a href="cadastro.html"
+              ><li class="btn btn-primary m-3" type="button">CADASTRO</li></a
+            >
+            <a href="Historico.html"
+              ><li class="btn btn-primary m-3" type="button">HISTÓRICO</li></a
+            >
+            <a href="Sobre.html"
+              ><li class="btn btn-primary m-3" type="button">SOBRE</li></a
+            >
           </ul>
         </nav>
-        <!-- Conteúdo principal (carrossel) -->
-        <div id="conteudo" class="col-lg-10">
+        <div id="conteudo" class="col-lg-8 col-md-7 col-sm-12">
           <div
             id="carouselExampleCaptions"
             class="carousel slide"
@@ -224,7 +205,6 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-          <!-- Cards -->
           <div class="container mt-3 card-container">
             <div class="card">
               <img src="img_caminh.jpg" class="card-img-top" alt="..." />
@@ -259,7 +239,6 @@
               </div>
             </div>
           </div>
-          <!-- Fim dos Cards -->
         </div>
       </div>
     </div>
