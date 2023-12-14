@@ -5,22 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style1.css" />
     <script src="script.js" defer></script>
-    <title>SOS-PNEUS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-...."
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-...."
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/dad3ff2ba1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js" defer></script>
+    <title>Prestador</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        background-color: #f8f9fa;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header {
+        background-color: #343a40;
+        color: #ffffff;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .logo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+
+      .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .status-dropdown {
+        margin-bottom: 10px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .bar-footer {
+        margin-top: auto;
+      }
+
+      footer {
+        background-color: #343a40;
+        color: #ffffff;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
   </head>
+
   <body>
-    <div class="top-bar">
-      <header class="header">
-        <a href="Index.html">
-        <img class="logo" src="img SOS.jpg" alt="Logo" />
+    <header class="header">
+      <img src="img SOS.jpg" class="logo" alt="Logo" />
+      <h1>Prestador</h1>
+      <a href="Login.html" class="btn btn-primary m-3">
+        <i class="fa-solid fa-arrow-right-from-bracket fa-bounce"></i> Log Out
       </a>
-        <h1>Home Prestador</h1>
-        <div>
-          </button>
-          <button class="btn btn-primary m-3">Histórico</button>
-          <button class="btn btn-primary m-3">Notificações</button>
-        </div>
-      </header>
-    </div>
+    </header>
+
     <div class="content">
       <select class="status-dropdown">
         <option value="offline">Offline</option>
@@ -67,6 +140,7 @@
         </ul>
       </div>
     </div>
+
     <div class="bar-footer">
       <br />
       <footer class="bg-dark text-light text-center py-2">

@@ -17,15 +17,14 @@
       crossorigin="anonymous"
     ></script>
 
-    <script
-      async
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQRoUAz_p1A304EFpZblVlq315hoEt89Q&callback=initMap"
-    ></script>
-
     <title>S.O.S. Pneus</title>
     <style>
       body {
         font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background-color: #f8f9fa;
       }
 
       .header {
@@ -50,7 +49,7 @@
       }
 
       .square {
-        width: 1100px;
+        width: 95%;
         height: 200px;
         background-color: #fcfcfc;
         border: 2px solid #ccc;
@@ -58,12 +57,50 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 20px;
       }
 
       #map {
+        display: none;
         height: 400px;
         width: 100%;
         margin-top: 20px;
+      }
+
+      footer {
+        background-color: #343a40;
+        color: #ffffff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+
+      main {
+        padding-bottom: 60px;
+      }
+
+      .botao {
+        width: 90%;
+        margin: auto;
+      }
+
+      .select-veiculo {
+        width: 100%;
+      }
+
+      @media (min-width: 768px) {
+        .botao {
+          width: 90%;
+          margin: auto;
+        }
+
+        .select-veiculo {
+          width: 90%;
+          margin: auto;
+        }
       }
     </style>
   </head>
@@ -82,8 +119,11 @@
       <div class="text-center mb-4">
         <div class="square mx-auto m-3 d-flex flex-column align-items-center">
           <h2>VEÍCULO ATUAL</h2>
-          <div class="botao m-3" style="width: 95%">
-            <select class="form-select" aria-label="Selecione seu Veículo">
+          <div class="botao m-3">
+            <select
+              class="form-select select-veiculo"
+              aria-label="Selecione seu Veículo"
+            >
               <option selected disabled>Selecione seu Veículo</option>
               <option value="carro">Carro</option>
               <option value="moto">Moto</option>
@@ -98,8 +138,8 @@
           <h2>BORRACHARIA</h2>
           <div class="form-group">
             <button
-              type="submit"
-              class="btn btn-primary"
+              type="button"
+              class="btn btn-primary mt-3 botao"
               onclick="iniciarBusca()"
             >
               Iniciar Busca
@@ -113,71 +153,73 @@
       </div>
     </main>
 
-    <footer class="bg-dark text-light text-center py-3">
+    <footer>
       <p>&copy; 2023 S.O.S. Pneus. Todos os direitos reservados.</p>
     </footer>
 
     <script>
-      let map;
-      const markers = [];
-
       function iniciarBusca() {
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function (position) {
-            const userLocation = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude,
-            };
+        document.getElementById("map").style.display = "block";
+        const center = { lat: -19.91482, lng: -44.0818 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 14,
+          center: center,
+        });
 
-            map = new google.maps.Map(document.getElementById("map"), {
-              center: userLocation,
-              zoom: 15,
-            });
+        const cepMarker = new google.maps.Marker({
+          position: center,
+          map: map,
+          title: "Nova Localização",
+          icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+        });
 
-            new google.maps.Marker({
-              position: userLocation,
-              map: map,
-              title: "Sua Localização Atual",
-            });
+        const borracharias = [
+          {
+            lat: -19.918043760327734,
+            lng: -44.07822721650027,
+            title: "Borracharia 1",
+          },
+          {
+            lat: -19.924365288678963,
+            lng: -44.08767209222495,
+            title: "Borracharia 2",
+          },
+          {
+            lat: -19.908506961009437,
+            lng: -44.07562777776911,
+            title: "Borracharia 3",
+          },
+          {
+            lat: -19.92179831480071,
+            lng: -44.068661468885786,
+            title: "Borracharia 4",
+          },
+          {
+            lat: -19.91611243917804,
+            lng: -44.069784243937164,
+            title: "Borracharia 5",
+          },
+        ];
 
-            const service = new google.maps.places.PlacesService(map);
-            service.nearbySearch(
-              {
-                location: userLocation,
-                radius: 20000,
-                type: "car_repair",
-              },
-              function (results, status) {
-                if (status === google.maps.places.PlacesServiceStatus.OK) {
-                  markers.forEach((marker) => marker.setMap(null));
-
-                  results.forEach((place) => {
-                    const marker = new google.maps.Marker({
-                      position: place.geometry.location,
-                      map: map,
-                      title: place.name,
-                    });
-
-                    const infowindow = new google.maps.InfoWindow({
-                      content: place.name,
-                    });
-
-                    marker.addListener("click", function () {
-                      infowindow.open(map, marker);
-                    });
-
-                    markers.push(marker);
-                  });
-                } else {
-                  console.error("Erro na busca de lugares:", status);
-                }
-              }
-            );
+        borracharias.forEach((borracharia) => {
+          const marker = new google.maps.Marker({
+            position: { lat: borracharia.lat, lng: borracharia.lng },
+            map: map,
+            title: borracharia.title,
+            icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
           });
-        } else {
-          alert("Geolocalização não é suportada pelo seu navegador.");
-        }
+
+          marker.addListener("click", function () {
+            window.location.href =
+              "pre-interacao.html?borracharia=" + borracharia.title;
+          });
+        });
       }
     </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQRoUAz_p1A304EFpZblVlq315hoEt89Q&callback=initMap"
+      async
+      defer
+    ></script>
   </body>
 </html>

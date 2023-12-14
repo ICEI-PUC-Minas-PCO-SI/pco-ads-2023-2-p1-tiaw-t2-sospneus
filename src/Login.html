@@ -69,7 +69,7 @@
             class="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
-            name="username"
+            name="email"
           />
         </div>
         <div class="mb-3">
@@ -80,6 +80,15 @@
             id="exampleInputPassword1"
             name="password"
           />
+        </div>
+        <div class="mb-3 form-check">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="prestadorCheck"
+            name="prestador"
+          />
+          <label class="form-check-label" for="prestadorCheck">PRESTADOR</label>
         </div>
         <div class="mb-3 form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1" />
@@ -93,47 +102,62 @@
             NÃO POSSUI LOGIN? CLIQUE AQUI
           </a>
         </div>
+        <div id="loginError" class="text-danger"></div>
       </form>
+      <div id="loginError" class="text-danger"></div>
     </div>
     <footer class="bg-dark text-light text-center py-3">
       <p>&copy; 2023 S.O.S. Pneus. Todos os direitos reservados.</p>
     </footer>
+
     <script>
       document
         .getElementById("loginForm")
-        .addEventListener("submit", function (event) {
+        .addEventListener("submit", async function (event) {
           event.preventDefault();
 
           const formData = new FormData(this);
-          const email = formData.get("username");
+          const email = formData.get("email");
           const senha = formData.get("password");
+          const isPrestador = formData.get("prestador");
 
           try {
-            (async () => {
-              const response = await fetch("http://localhost:3000/api/login", {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                  "E-mail": email,
-                  Senha: senha,
-                }),
-              });
+            const response = await fetch("http://localhost:3000/api/login", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ email, senha }),
+            });
 
-              const data = await response.json();
-              console.log("Resposta do servidor:", data);
+            if (!response.ok) {
+              throw new Error(
+                `Erro na requisição: ${response.status} ${response.statusText}`
+              );
+            }
 
-              if (data.redirectTo) {
-                window.location.href = `${data.redirectTo}?id=${
-                  data.id
-                }&nome=${encodeURIComponent(
-                  data.nome
-                )}&email=${encodeURIComponent(data.email)}`;
+            const usuario = await response.json();
+
+            if (usuario.error) {
+              console.log("Credenciais incorretas");
+              const errorElement = document.getElementById("loginError");
+              errorElement.textContent =
+                "Credenciais incorretas. Tente novamente.";
+            } else {
+              console.log("Login bem-sucedido:", usuario);
+
+              if (isPrestador) {
+                window.location.href = "Prestador.html";
+              } else {
+                window.location.href = `cliente.html?id=${usuario.id}`;
               }
-            })();
+            }
           } catch (error) {
             console.error("Erro ao fazer login:", error);
+
+            const errorElement = document.getElementById("loginError");
+            errorElement.textContent =
+              "Credenciais incorretas. Tente novamente.";
           }
         });
     </script>

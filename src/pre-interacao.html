@@ -11,39 +11,62 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-...."
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>S.O.S. Pneus</title>
     <style>
-          .popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .popup-content {
-            background: #fff;
-            padding: 20px;
-            border-radius: 5px;
-        }
+      .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .popup-content {
+        background: #fff;
+        padding: 20px;
+        border-radius: 5px;
+      }
+
+      .card {
+        border-radius: 20px;
+      }
+
+      .card-body {
+        width: 95%;
+        margin: 0 auto;
+      }
+
+      #RealizarBuscaBtn {
+        width: 50%;
+        margin: 0 auto;
+        display: block;
+      }
     </style>
   </head>
 
-  <header class="header">
-    <a href="Index.html">
-    <img src="img SOS.jpg" class="logo" alt="Logo" />
-  </a>
-    <h1>Home Cliente</h1>
-    <button class="btn btn-primary m-3">Histórico</button>
-    <input class="btn btn-primary m-3" type="button" value="Notificações" />
-  </header>
-
   <body>
+    <header class="header">
+      <a href="Index.html">
+        <img src="img SOS.jpg" class="logo" alt="Logo" />
+      </a>
+      <h1>Home Cliente</h1>
+      <button class="btn btn-primary m-3">Histórico</button>
+      <a href="Login.html" class="btn btn-primary m-3">
+        <i class="fa-solid fa-arrow-right-from-bracket fa-bounce"></i> Log Out
+      </a>
+    </header>
+
     <div class="container">
       <div class="row justify-content-center mt-5 mb-3">
         <div class="col-md-6">
@@ -51,18 +74,26 @@
             <div class="card-body">
               <h4 class="card-title">Formulário de Contato</h4>
               <form>
-                
                 <div class="mb-3">
-                  <label for="nome" class="form-label">Nome</label>
-                  <input
-                    type="text"
+                  <label for="formaPagamento" class="form-label"
+                    >Escolha a forma de pagamento:</label
+                  >
+                  <select
+                    id="formaPagamento"
+                    name="formaPagamento"
                     class="form-control"
-                    id="nome"
-                    name="nome"
-                  />
+                  >
+                    <option value="" disabled selected>
+                      Selecionar tipo de pagamento
+                    </option>
+                    <option value="pix">Pix</option>
+                    <option value="dinheiro">Dinheiro</option>
+                    <option value="credito">Cartão</option>
+                  </select>
                 </div>
+
                 <div class="mb-3">
-                  <label for="contato" class="form-label">Contato</label>
+                  <label for="contato" class="form-label">Nome:</label>
                   <input
                     type="text"
                     class="form-control"
@@ -71,7 +102,7 @@
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="telefone" class="form-label">Telefone</label>
+                  <label for="telefone" class="form-label">Telefone:</label>
                   <input
                     type="tel"
                     class="form-control"
@@ -81,7 +112,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="distancia" class="form-label"
-                    >Distância Aproximada (em km)</label
+                    >Distância Aproximada (em km):</label
                   >
                   <input
                     type="number"
@@ -91,7 +122,9 @@
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="obs" class="form-label">Descrição breve da demanda</label>
+                  <label for="obs" class="form-label"
+                    >Descrição da demanda:</label
+                  >
                   <textarea
                     class="form-control"
                     id="obs"
@@ -99,52 +132,70 @@
                     rows="4"
                   ></textarea>
                 </div>
-               
-                <button type="button" class="btn btn-primary" id="RealizarBuscaBtn">Realizar Busca</button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="RealizarBuscaBtn"
+                >
+                  Realizar Busca
+                </button>
               </form>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
+
     <div class="popup" id="popup">
-        <div class="popup-content">
-            <p>Realizando busca...</p>
-           <span id="countdown">20</span> segundos.
-        </div>
+      <div class="popup-content">
+        <p>Realizando busca...</p>
+        <span id="countdown">10</span> segundos.
+      </div>
     </div>
-    
-  
-    </div>
+
+    <div
+      class="modal fade"
+      id="formasPagamentoModal"
+      tabindex="-1"
+      aria-labelledby="formasPagamentoModalLabel"
+      aria-hidden="true"
+    ></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var RealizarBuscaBtn = document.getElementById("RealizarBuscaBtn");
-            var popup = document.getElementById("popup");
-            var countdownElement = document.getElementById("countdown");
-        
-            function updateCountdown() {
-                var seconds = parseInt(countdownElement.textContent);
-                seconds--;
-                countdownElement.textContent = seconds;
-        
-                if (seconds <= 0) {
-                    closePopup();
-                }
-            }
-        
-            function openPopup() {
-                popup.style.display = "flex";
-                setInterval(updateCountdown, 1000);
-            }
-        
-            function closePopup() {
-                popup.style.display = "none";
-                countdownElement.textContent = "20";
-            }
-        
-            RealizarBuscaBtn.addEventListener("click", openPopup);
+      document.addEventListener("DOMContentLoaded", function () {
+        var RealizarBuscaBtn = document.getElementById("RealizarBuscaBtn");
+        var popup = document.getElementById("popup");
+        var countdownElement = document.getElementById("countdown");
+
+        function updateCountdown() {
+          var seconds = parseInt(countdownElement.textContent);
+          seconds--;
+          countdownElement.textContent = seconds;
+
+          if (seconds <= 0) {
+            window.location.href = "interacao.html";
+          }
+        }
+
+        function openPopup() {
+          popup.style.display = "flex";
+          setInterval(updateCountdown, 1000);
+        }
+
+        function closePopup() {
+          popup.style.display = "none";
+          countdownElement.textContent = "10";
+        }
+
+        RealizarBuscaBtn.addEventListener("click", function () {
+          openPopup();
+          setTimeout(closePopup, 10000);
         });
+      });
     </script>
 
     <footer class="bg-dark text-light text-center py-2">
