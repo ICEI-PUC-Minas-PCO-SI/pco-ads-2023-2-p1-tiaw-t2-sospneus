@@ -25,8 +25,9 @@ Luis:
 
 ALEXANDRE:
 * Participei da reunião do dia 25/11/23;
-* Fiquei responsável pela aplicação do java script, JSON,Local Storage e AJAX, nas paginas Download, Principal e Home Cliente;
-
+* Fiquei responsável pela aplicação do java script, JSON,Local Storage e AJAX, nas paginas index, cadastro, login, sobre, Download, cliente, pre-interaçao, interação, prestador previa e prestador.
+* Fiz o mapa na parte do cliente.
+* Criei o banco de dados para cadastro e login.
 
 FERNANDO:
 * Participei da reunião do dia 25/11/23;
