@@ -14,6 +14,9 @@ Wagner:
 * Participei da reunião do dia 25/11/23;
 * Fiquei responsável pela aplicação do java script, JSON,Local Storage e AJAX, nas paginas de Historico e Avaliação;
 * Atualizei os codigos no historico e avaliação com o java script;
+* Tentativa de adicionar o banco de dados na avaliação e historico;
+*  tentativa de deploy;
+ 
 
 
 Luis:
@@ -21,6 +24,8 @@ Luis:
 
 * Participei da reunião do dia 25/11/23;
 * Fiquei responsável pela aplicação do java script, JSON,Local Storage e AJAX, nas paginas de Historico e Avaliação;
+* Tentativa de adicionar o banco de dados na avaliação e historico;
+* tentativa de deploy;
 
 
 ALEXANDRE:
