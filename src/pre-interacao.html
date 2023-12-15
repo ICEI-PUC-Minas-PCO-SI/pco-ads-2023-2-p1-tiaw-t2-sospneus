@@ -1,5 +1,3 @@
-CODIGO DE PRE INTERACAO
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -85,8 +83,6 @@ CODIGO DE PRE INTERACAO
         </div>
     </div>
 
-
-    </div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var RealizarBuscaBtn = document.getElementById("RealizarBuscaBtn");
@@ -113,7 +109,21 @@ CODIGO DE PRE INTERACAO
                 countdownElement.textContent = "20";
             }
 
-            RealizarBuscaBtn.addEventListener("click", openPopup);
+            RealizarBuscaBtn.addEventListener("click", function () {
+                openPopup();
+
+                
+                var formData = {
+                    nome: document.getElementById("nome").value,
+                    contato: document.getElementById("contato").value,
+                    telefone: document.getElementById("example-input-7").value,
+                    distancia: document.getElementById("distancia").value,
+                    obs: document.getElementById("obs").value
+                };
+
+                
+                console.log("Dados a serem adicionados:", formData);
+            });
         });
     </script>
 
