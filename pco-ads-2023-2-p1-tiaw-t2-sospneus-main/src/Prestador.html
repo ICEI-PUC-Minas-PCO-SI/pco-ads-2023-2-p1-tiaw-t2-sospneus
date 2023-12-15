@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style1.css" />
+    <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-...."
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-...."
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/dad3ff2ba1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js" defer></script>
+    <title>Prestador</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        background-color: #f8f9fa;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header {
+        background-color: #343a40;
+        color: #ffffff;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .logo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+
+      .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .status-dropdown {
+        margin-bottom: 10px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .bar-footer {
+        margin-top: auto;
+      }
+
+      footer {
+        background-color: #343a40;
+        color: #ffffff;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <img src="img SOS.jpg" class="logo" alt="Logo" />
+      <h1>Prestador</h1>
+      <a href="Login.html" class="btn btn-primary m-3">
+        <i class="fa-solid fa-arrow-right-from-bracket fa-bounce"></i> Log Out
+      </a>
+    </header>
+
+    <div class="content">
+      <select class="status-dropdown">
+        <option value="offline">Offline</option>
+        <option value="online">Online</option>
+      </select>
+      <div id="lista-online" class="hidden">
+        <ul>
+          <h1>Relação de Clientes aguardando</h1>
+          <table>
+            <tr>
+              <th>Nome</th>
+              <th>Distância</th>
+              <th>Veículo</th>
+              <th>Espera</th>
+            </tr>
+            <tr>
+              <td>João</td>
+              <td>25 km</td>
+              <td>Palio</td>
+              <th>00:15</th>
+              <td>
+                <button class="item-button" id="button-1">Visualizar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Maria</td>
+              <td>30 km</td>
+              <td>Gol</td>
+              <th>00:10</th>
+              <td>
+                <button class="item-button" id="button-2">Visualizar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Carlos</td>
+              <td>22 km</td>
+              <td>Honda Civic</td>
+              <th>00:05</th>
+              <td>
+                <button class="item-button" id="button-3">Visualizar</button>
+              </td>
+            </tr>
+          </table>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bar-footer">
+      <br />
+      <footer class="bg-dark text-light text-center py-2">
+        <p>&copy; 2023 S.O.S. Pneus. Todos os direitos reservados.</p>
+      </footer>
+    </div>
+  </body>
+</html>
