@@ -17,6 +17,34 @@
       crossorigin="anonymous"
     />
     <title>S.O.S. Pneus</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      main {
+        flex: 1;
+      }
+
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+
+      .icone-realce {
+        color: #ffffff; /* Defina a cor desejada para o realce */
+        animation: bounce 2s infinite; /* Ajuste a duração e outras propriedades conforme necessário */
+      }
+    </style>
   </head>
 
   <body>
@@ -25,9 +53,14 @@
         <img src="img SOS.jpg" class="logo" alt="Logo" />
       </a>
       <h1>Home Cliente</h1>
-      <a href="Login.html" class="btn btn-primary m-3">
-        <i class="fa-solid fa-arrow-right-from-bracket fa-bounce"></i> Log Out
-      </a>
+      
+    <a href="Index.html" class="btn btn-primary m-3">
+      <i class="fa-solid fa-home icone-realce"></i> Página Inicial
+  </a>
+      
+  <a href="Login.html" class="btn btn-primary m-3 ">
+    <i class="fa-solid fa-arrow-right-from-bracket icone-realce"></i> Log Out
+  </a>
     </header>
 
     <main>
@@ -76,15 +109,5 @@
 
     <script src="seu-script.js"></script>
   </body>
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    main {
-      flex: 1;
-    }
-  </style>
+  
 </html>
