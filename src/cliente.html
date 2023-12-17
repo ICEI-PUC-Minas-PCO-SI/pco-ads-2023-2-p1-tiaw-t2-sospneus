@@ -18,6 +18,7 @@
     ></script>
 
     <title>S.O.S. Pneus</title>
+
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -158,6 +159,12 @@
     </footer>
 
     <script>
+      // Recupere o e-mail do localStorage
+      var userEmail = localStorage.getItem("userEmail");
+
+      // Se o e-mail estiver disponível, exiba a mensagem de boas-vindas
+      if (userEmail) setWelcomeMessage(userEmail);
+
       function iniciarBusca() {
         document.getElementById("map").style.display = "block";
         const center = { lat: -19.91482, lng: -44.0818 };
