@@ -53,3 +53,28 @@ app.post("/login", async (req, res) => {
     res.status(500).json({ error: "Erro interno no servidor" });
   }
 });
+
+// Rota para criar uma avaliação
+app.post("/avaliacoes", (req, res) => {
+  const { nome, data, comentario, rating } = req.body;
+
+  try {
+    const novaAvaliacao = {
+      nome,
+      data,
+      comentario,
+      rating,
+    };
+
+    // Adicione a nova avaliação ao banco de dados
+    db.avaliacoes.push(novaAvaliacao);
+
+    res.status(201).json({
+      message: "Avaliação criada com sucesso",
+      avaliacao: novaAvaliacao,
+    });
+  } catch (error) {
+    console.error("Erro ao criar avaliação:", error);
+    res.status(500).json({ error: "Erro interno no servidor" });
+  }
+});
