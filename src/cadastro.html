@@ -3,18 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       integrity="sha512-...."
       crossorigin="anonymous"
     />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <title>S.O.S. Pneus</title>
     <style>
@@ -46,7 +49,7 @@
 
       .form-card {
         width: 100%;
-        max-width: 600px;
+        max-width: 500px;
         margin: 20px auto;
         padding: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -77,7 +80,6 @@
         <img src="img SOS.jpg" class="logo" alt="Logo" />
       </a>
       <h1>Cadastro</h1>
-
       <button class="btn btn-primary m-3">Histórico</button>
       <a href="Login.html" class="btn btn-primary m-3">
         <i class="fa-solid fa-arrow-right-from-bracket fa-bounce"></i> Log Out
@@ -86,18 +88,16 @@
 
     <main class="main-content">
       <div class="form-card">
-        <select
-          class="form-select"
-          aria-label="Tipo de Usuário"
-          id="tipoUsuario"
-          name="tipoUsuario"
-        >
-          <option selected disabled>Escolha uma opção</option>
-          <option value="cliente">Cliente</option>
-          <option value="prestador">Prestador</option>
-        </select>
-
         <form id="cadastroForm">
+          <div class="form-group">
+            <label for="tipoUsuario">Tipo de Usuário:</label>
+            <select id="tipoUsuario" name="tipoUsuario" class="form-select">
+              <option value="">Selecione o tipo de usuário</option>
+              <option value="cliente">Cliente</option>
+              <option value="prestador">Prestador</option>
+            </select>
+          </div>
+
           <div class="form-group">
             <label for="nome">Nome:</label>
             <input
@@ -116,6 +116,8 @@
               name="telefone"
               class="form-control"
               required
+              pattern="\(\d{2}\)\s\d{4,5}-\d{4}"
+              placeholder="(99) 99999-9999"
             />
           </div>
           <div class="form-group">
@@ -126,9 +128,9 @@
               name="email"
               class="form-control"
               required
+              title="Informe um endereço de e-mail válido (ex: exemplo@dominio.com)"
             />
           </div>
-
           <div class="form-group">
             <label for="senha">*Senha:</label>
             <input
@@ -149,72 +151,10 @@
               required
             />
           </div>
-
-          <div class="row">
-            <div class="col-md-6">
-              <label for="rua">Rua:</label>
-              <input
-                type="text"
-                id="rua"
-                name="rua"
-                class="form-control"
-                required
-              />
-            </div>
-            <div class="col-md-3">
-              <label for="numero">Nº: </label>
-              <input
-                type="text"
-                id="numero"
-                name="numero"
-                class="form-control"
-                required
-              />
-            </div>
-            <div class="col-md-3">
-              <label for="cep">CEP:</label>
-              <input
-                type="text"
-                id="cep"
-                name="cep"
-                class="form-control"
-                required
-              />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="bairro">Bairro:</label>
-            <input
-              type="text"
-              id="bairro"
-              name="bairro"
-              class="form-control"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="cidade">Cidade:</label>
-            <input
-              type="text"
-              id="cidade"
-              name="cidade"
-              class="form-control"
-              required
-            />
-          </div>
-
-          <div class="form-group hidden" id="cnpjGroup">
+          <div class="form-group" id="cnpjGroup" style="display: none">
             <label for="cnpj">CNPJ:</label>
-            <input
-              type="text"
-              id="cnpj"
-              name="cnpj"
-              class="form-control"
-              required
-            />
+            <input type="text" id="cnpj" name="cnpj" class="form-control" />
           </div>
-
           <div class="form-group">
             <div class="form-check">
               <input
@@ -244,77 +184,92 @@
             </div>
           </div>
           <div class="form-group mt-3">
-            <button type="submit" class="btn btn-primary">Salvar</button>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
           </div>
         </form>
       </div>
     </main>
 
+    <div
+      class="modal fade"
+      id="successModal"
+      tabindex="-1"
+      aria-labelledby="successModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="successModalLabel">
+              Cadastro Efetuado com Sucesso!
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p id="successMessage">Seu cadastro foi realizado com sucesso.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="okButton">
+              OK
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer class="bg-dark text-light text-center py-2">
       <p>&copy; 2023 S.O.S. Pneus. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
-
     <script>
-      document
-        .getElementById("tipoUsuario")
-        .addEventListener("change", function () {
-          var tipoUsuario = this.value;
-          var cnpjGroup = document.getElementById("cnpjGroup");
-          var cnpjInput = document.getElementById("cnpj");
-
-          if (tipoUsuario === "prestador") {
-            cnpjGroup.classList.remove("hidden");
-            cnpjInput.removeAttribute("disabled");
+      $(document).ready(function () {
+        // Manipula a mudança no tipo de usuário
+        $("#tipoUsuario").change(function () {
+          if ($(this).val() === "prestador") {
+            $("#cnpjGroup").show();
           } else {
-            cnpjGroup.classList.add("hidden");
-            cnpjInput.setAttribute("disabled", "disabled");
+            $("#cnpjGroup").hide();
           }
         });
 
-      document
-        .getElementById("cadastroForm")
-        .addEventListener("submit", async function (event) {
+        // Manipula o envio do formulário
+        $("#cadastroForm").submit(function (event) {
           event.preventDefault();
 
-          const formData = new FormData(this);
-          const tipoUsuario = formData.get("tipoUsuario");
+          // Coleta os dados do formulário
+          const formData = $(this).serialize();
 
-          if (tipoUsuario === "cliente") {
-            formData.delete("cnpj");
-          }
+          // Exibe o modal de sucesso
+          $("#successModal").modal("show");
 
-          try {
-            console.log("Antes do envio do formulário:", formData);
+          // Adiciona um manipulador para o botão "OK" no modal
+          $("#okButton").click(function () {
+            // Envia uma requisição POST para o servidor após clicar em "OK"
+            $.ajax({
+              type: "POST",
+              url: "http://localhost:3000/usuarios", // Atualize a URL conforme necessário
+              data: formData,
+              success: function (response) {
+                // Limpa o formulário após o sucesso
+                $("#cadastroForm")[0].reset();
 
-            const response = await fetch("http://localhost:3000/usuarios", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
+                // Fecha o modal
+                $("#successModal").modal("hide");
               },
-              body: JSON.stringify(Object.fromEntries(formData)),
+              error: function (error) {
+                console.error("Erro ao cadastrar:", error.responseText);
+                // Trate os erros conforme necessário
+              },
             });
-
-            console.log("Após a resposta do servidor:", response);
-
-            if (!response.ok) {
-              throw new Error(
-                `Erro na requisição: ${response.status} ${response.statusText}`
-              );
-            }
-
-            const data = await response.json();
-            console.log("Cadastro realizado com sucesso:", data);
-
-            const queryString = `?id=${data.id}&nome=${encodeURIComponent(
-              data.nome
-            )}&email=${encodeURIComponent(data.email)}`;
-            window.location.href = `cliente.html${queryString}`;
-          } catch (error) {
-            console.error("Erro ao cadastrar:", error);
-          }
+          });
         });
+      });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
