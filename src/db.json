@@ -35,6 +35,18 @@
       "termos": "on",
       "autorizacaoGPS": "on",
       "id": 3
+    },
+    {
+      "tipoUsuario": "cliente",
+      "nome": "Alexandre",
+      "telefone": "(31) 98314-0709",
+      "email": "martins.assis.0515@gmail.com",
+      "senha": "123",
+      "confirmarSenha": "123",
+      "cnpj": "",
+      "termos": "on",
+      "autorizacaoGPS": "on",
+      "id": 4
     }
   ],
   "login": [
@@ -189,10 +201,48 @@
       "manterConectado": true,
       "prestador": true,
       "id": 22
+    },
+    {
+      "email": "martins.assis.0511@gmail.com",
+      "senha": "123",
+      "manterConectado": false,
+      "prestador": false,
+      "id": 23
+    },
+    {
+      "email": "martins.assis.0511@gmail.com",
+      "senha": "123",
+      "manterConectado": false,
+      "prestador": true,
+      "id": 24
+    }
+  ],
+  "avaliacoes": [
+    {
+      "nome": "Alexandre",
+      "data": "2023-12-17",
+      "comentario": "Ótimo serviço!",
+      "rating": "4",
+      "id": 1
+    },
+    {
+      "nome": "Renata",
+      "data": "2023-12-17",
+      "comentario": "Super gentil, excelente trabalho!",
+      "rating": "5",
+      "id": 2
     }
   ],
   "posts": [],
-  "comments": [],
+  "comments": [
+    {
+      "nome": "Alexandre",
+      "data": "2023-12-17",
+      "comentario": "Muito bom!",
+      "rating": "4",
+      "id": 1
+    }
+  ],
   "profile": {
     "name": "typicode"
   }
