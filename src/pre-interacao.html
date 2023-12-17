@@ -191,10 +191,25 @@
           countdownElement.textContent = "10";
         }
 
-        RealizarBuscaBtn.addEventListener("click", function () {
-          openPopup();
-          setTimeout(closePopup, 10000);
-        });
+        function realizarBusca() {
+          var formaPagamento = document.getElementById("formaPagamento").value;
+          var contato = document.getElementById("contato").value;
+          var telefone = document.getElementById("telefone").value;
+          var distancia = document.getElementById("distancia").value;
+          var obs = document.getElementById("obs").value;
+
+          // Verificar se os campos estão preenchidos
+          if (formaPagamento && contato && telefone && distancia && obs) {
+            openPopup();
+            setTimeout(closePopup, 10000);
+          } else {
+            alert(
+              "Por favor, preencha todos os campos antes de realizar a busca."
+            );
+          }
+        }
+
+        RealizarBuscaBtn.addEventListener("click", realizarBusca);
       });
     </script>
 

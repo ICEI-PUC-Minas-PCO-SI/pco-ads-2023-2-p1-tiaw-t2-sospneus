@@ -1,6 +1,7 @@
 {
   "usuarios": [
     {
+      "id": "96b388a8-7436-44c7-a15f-b016d94be16f",
       "nome": "Alexandre",
       "telefone": "31 992363036",
       "email": "martins.assis.0511@gmail.com",
@@ -13,10 +14,10 @@
       "cidade": "Contagem",
       "cnpj": "11.361.974/0001-17",
       "termos": "on",
-      "autorizacaoGPS": "on",
-      "id": "96b388a8-7436-44c7-a15f-b016d94be16f"
+      "autorizacaoGPS": "on"
     },
     {
+      "id": "97341d0b-82f9-4548-83b3-46e635f8b190",
       "nome": "Wagner",
       "telefone": "31 123456789",
       "email": "wagnergay@gmail.com",
@@ -29,10 +30,10 @@
       "cidade": "Contagem",
       "cnpj": "11.361.974/0001-17",
       "termos": "on",
-      "autorizacaoGPS": "on",
-      "id": "97341d0b-82f9-4548-83b3-46e635f8b190"
+      "autorizacaoGPS": "on"
     },
     {
+      "id": "cac322dc-aac7-4c16-b161-0071382487d5",
       "nome": "Fernando",
       "telefone": "31 83145987",
       "email": "fernando123@gmail.com",
@@ -45,10 +46,10 @@
       "cidade": "Contagem",
       "cnpj": "11.361.974/0001-17",
       "termos": "on",
-      "autorizacaoGPS": "on",
-      "id": "cac322dc-aac7-4c16-b161-0071382487d5"
+      "autorizacaoGPS": "on"
     },
     {
+      "id": "p4fuzR6",
       "nome": "Luis",
       "telefone": "31 123456789",
       "email": "luis2023@gmail.com",
@@ -61,10 +62,10 @@
       "cidade": "Contagem",
       "cnpj": "11.361.974/0001-17",
       "termos": "on",
-      "autorizacaoGPS": "on",
-      "id": "p4fuzR6"
+      "autorizacaoGPS": "on"
     },
     {
+      "id": "cC-M7gj",
       "nome": "Alexandre",
       "telefone": "31 992363036",
       "email": "martins.assis.0511@gmail.com",
@@ -76,10 +77,10 @@
       "bairro": "Nova Contagem",
       "cidade": "Contagem",
       "termos": "on",
-      "autorizacaoGPS": "on",
-      "id": "cC-M7gj"
+      "autorizacaoGPS": "on"
     },
     {
+      "id": "Y3W0Mky",
       "nome": "Alexandre",
       "telefone": "31 992363036",
       "email": "martins.assis.0511@gmail.com",
@@ -91,135 +92,24 @@
       "bairro": "Nova Contagem",
       "cidade": "Contagem",
       "termos": "on",
-      "autorizacaoGPS": "on",
-      "id": "Y3W0Mky"
+      "autorizacaoGPS": "on"
     }
   ],
-  "login": [
+  "posts": [
     {
-      "email": "martins.assis.0511@gmail.com",
-      "senha": "123",
-      "id": "96b388a8-7436-44c7-a15f-b016d94be16f"
-    },
-    {
-      "email": "martins.assis.0511@gmail.com",
-      "senha": null,
-      "id": "V5A8PlD"
-    },
-    {
-      "email": "martins.assis.0511@gmail.com",
-      "senha": null,
-      "id": "aJ6l_fm"
-    },
-    {
-      "email": "martins.assis.0511@gmail.com",
-      "senha": null,
-      "id": "HbuwDAr"
-    },
-    {
-      "email": "martins.assis.0511@gmail.com",
-      "senha": null,
-      "id": "JA_jwUD"
-    },
-    {
-      "email": "",
-      "senha": null,
-      "id": "sZqmJd6"
-    },
-    {
-      "email": "",
-      "senha": null,
-      "id": "nyrdUEh"
-    },
-    {
-      "email": "",
-      "senha": null,
-      "id": "uVCE8tL"
-    },
-    {
-      "email": "martins.assis.0511@gmail.com",
-      "senha": null,
-      "id": "CVG9jmw"
-    },
-    {
-      "email": "martins.assis.0511@gmail.com",
-      "senha": null,
-      "id": "RZH-Z60"
-    },
-    {
-      "email": "martins.assis.0511@gmail.com",
-      "senha": null,
-      "id": "hcJMBc7"
-    },
-    {
-      "email": "",
-      "senha": null,
-      "id": "cvDpDS6"
-    },
-    {
-      "email": "",
-      "senha": null,
-      "id": "O2gsnZf"
-    },
-    {
-      "email": "",
-      "senha": null,
-      "id": "xeZ8p7N"
-    },
-    {
-      "email": "",
-      "senha": null,
-      "id": "aPoUMxu"
-    },
-    {
-      "email": null,
-      "senha": "",
-      "id": "jlKSlYg"
-    },
-    {
-      "email": null,
-      "senha": "123",
-      "id": "wgjq4p9"
-    },
-    {
-      "email": null,
-      "senha": "123",
-      "id": "tgvVHTK"
-    },
-    {
-      "email": null,
-      "senha": "123",
-      "id": "Cx5UmH8"
-    },
-    {
-      "email": null,
-      "senha": "123",
-      "id": "maiDJoC"
-    },
-    {
-      "email": null,
-      "senha": "123",
-      "id": "ZPj-ffE"
-    },
-    {
-      "email": "martins.assis.0511@gmail.com",
-      "senha": "123",
-      "id": "xeO_oxx"
-    },
-    {
-      "email": "martins.assis.0511@gmail.com",
-      "senha": "123",
-      "id": "rBhu5KQ"
-    },
-    {
-      "email": "martins.assis.0511@gmail.com",
-      "senha": "123",
-      "id": "nJ55xNQ"
-    },
-    {
-      "email": "martins.assis.0511@gmail.com",
-      "senha": "123",
-      "id": "GZBUj30"
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
     }
-  ]
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }
