@@ -276,6 +276,9 @@
 
                 // Fecha o modal
                 $("#successModal").modal("hide");
+
+                // Redireciona para a página de login
+                window.location.href = "Login.html";
               },
               error: function (error) {
                 console.error("Erro ao cadastrar:", error.responseText);
