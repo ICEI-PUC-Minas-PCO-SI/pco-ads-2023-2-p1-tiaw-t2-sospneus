@@ -23,6 +23,12 @@
       "termos": "on",
       "autorizacaoGPS": "on",
       "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
     }
   ],
   "login": [
@@ -30,6 +36,20 @@
       "id": 1,
       "email": "usuario@exemplo.com",
       "senha": "senha123"
+    },
+    {
+      "email": "renataleondas1011@gmail.com",
+      "senha": "123",
+      "manterConectado": true,
+      "prestador": false,
+      "id": 2
+    },
+    {
+      "email": "renataleondas1012@gmail.com",
+      "senha": "123",
+      "manterConectado": true,
+      "prestador": true,
+      "id": 3
     }
   ],
   "avaliacoes": [
@@ -46,19 +66,13 @@
       "comentario": "Péssimo trabalho!",
       "rating": "1",
       "id": 3
-    }
-  ],
-  "posts": [],
-  "comments": [
+    },
     {
-      "nome": "Alexandre",
+      "nome": "Renata Teixeira",
       "data": "2023-12-17",
-      "comentario": "Muito bom!",
-      "rating": "4",
-      "id": 1
+      "comentario": "Excelente trabalho!",
+      "rating": "5",
+      "id": 4
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
