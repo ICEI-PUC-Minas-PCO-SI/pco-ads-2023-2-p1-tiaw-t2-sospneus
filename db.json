@@ -83,6 +83,24 @@
       "termos": "on",
       "autorizacaoGPS": "on",
       "id": 7
+    },
+    {
+      "tipoUsuario": "cliente",
+      "nome": "Renata",
+      "telefone": "(31) 99454-9068",
+      "email": "renataleondas27@gmail.com",
+      "senha": "123",
+      "confirmarSenha": "123",
+      "cnpj": "",
+      "termos": "on",
+      "autorizacaoGPS": "on",
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
     }
   ],
   "login": [
@@ -97,6 +115,27 @@
       "manterConectado": true,
       "prestador": false,
       "id": 2
+    },
+    {
+      "email": "martins.assis.0511@gmail.com",
+      "senha": "123",
+      "manterConectado": true,
+      "prestador": false,
+      "id": 3
+    },
+    {
+      "email": "wagnerjunior2002@gmail.com",
+      "senha": "123",
+      "manterConectado": true,
+      "prestador": false,
+      "id": 4
+    },
+    {
+      "email": "martins.assis.0511@gmail.com",
+      "senha": "123",
+      "manterConectado": true,
+      "prestador": false,
+      "id": 5
     }
   ],
   "avaliacoes": [
@@ -106,6 +145,20 @@
       "comentario": "Ótimo serviço!",
       "rating": "4",
       "id": 1
+    },
+    {
+      "nome": "Renata",
+      "data": "2023-12-18",
+      "comentario": "Péssimo trabalho!",
+      "rating": "1",
+      "id": 3
+    },
+    {
+      "nome": "Wagner",
+      "data": "2023-12-17",
+      "comentario": "Serviço foi bem feito, mas o prestador era arrogante!",
+      "rating": "3",
+      "id": 4
     }
   ],
   "posts": [],

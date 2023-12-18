@@ -49,117 +49,127 @@
 
       #RealizarBuscaBtn {
         width: 50%;
-        margin: 0 auto;
+        margin: 0 auto; /* Centralizar o botão */
         display: block;
+      }
+
+      /* Adicione uma nova classe personalizada para o corpo da página */
+      .body-with-footer {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* Garanta que o footer permaneça no final da página */
+      .content {
+        flex-grow: 1;
       }
     </style>
   </head>
 
-  <body>
-    <header class="header">
-      <a href="Index.html">
-        <img src="img SOS.jpg" class="logo" alt="Logo" />
-      </a>
-      <h1>Home Cliente</h1>
-      <button class="btn btn-primary m-3">Histórico</button>
-      <a href="Login.html" class="btn btn-primary m-3">
-        <i class="fa-solid fa-arrow-right-from-bracket fa-bounce"></i> Log Out
-      </a>
-    </header>
+  <body class="body-with-footer">
+    <div class="content">
+      <header class="header">
+        <a href="Index.html">
+          <img src="img SOS.jpg" class="logo" alt="Logo" />
+        </a>
+        <h1>Home Cliente</h1>
+        <button class="btn btn-primary m-3">Histórico</button>
+        <a href="Login.html" class="btn btn-primary m-3">
+          <i class="fa-solid fa-arrow-right-from-bracket fa-bounce"></i> Log Out
+        </a>
+      </header>
 
-    <div class="container">
-      <div class="row justify-content-center mt-5 mb-3">
-        <div class="col-md-6">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">Formulário de Contato</h4>
-              <form>
-                <div class="mb-3">
-                  <label for="formaPagamento" class="form-label"
-                    >Escolha a forma de pagamento:</label
-                  >
-                  <select
-                    id="formaPagamento"
-                    name="formaPagamento"
-                    class="form-control"
-                  >
-                    <option value="" disabled selected>
-                      Selecionar tipo de pagamento
-                    </option>
-                    <option value="pix">Pix</option>
-                    <option value="dinheiro">Dinheiro</option>
-                    <option value="credito">Cartão</option>
-                  </select>
-                </div>
+      <div class="container">
+        <div class="row justify-content-center mt-5 mb-3">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Formulário de Contato</h4>
+                <form>
+                  <div class="mb-3">
+                    <label for="formaPagamento" class="form-label"
+                      >Escolha a forma de pagamento:</label
+                    >
+                    <select
+                      id="formaPagamento"
+                      name="formaPagamento"
+                      class="form-control"
+                    >
+                      <option value="" disabled selected>
+                        Selecionar tipo de pagamento
+                      </option>
+                      <option value="pix">Pix</option>
+                      <option value="dinheiro">Dinheiro</option>
+                      <option value="credito">Cartão</option>
+                    </select>
+                  </div>
 
-                <div class="mb-3">
-                  <label for="contato" class="form-label">Nome:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="contato"
-                    name="contato"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="telefone" class="form-label">Telefone:</label>
-                  <input
-                    type="tel"
-                    class="form-control"
-                    id="telefone"
-                    name="telefone"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="distancia" class="form-label"
-                    >Distância Aproximada (em km):</label
+                  <div class="mb-3">
+                    <label for="contato" class="form-label">Nome:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="contato"
+                      name="contato"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="telefone" class="form-label">Telefone:</label>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="telefone"
+                      name="telefone"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="distancia" class="form-label"
+                      >Distância Aproximada (em km):</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="distancia"
+                      name="distancia"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="obs" class="form-label"
+                      >Descrição da demanda:</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="obs"
+                      name="obs"
+                      rows="4"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="RealizarBuscaBtn"
                   >
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="distancia"
-                    name="distancia"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="obs" class="form-label"
-                    >Descrição da demanda:</label
-                  >
-                  <textarea
-                    class="form-control"
-                    id="obs"
-                    name="obs"
-                    rows="4"
-                  ></textarea>
-                </div>
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  id="RealizarBuscaBtn"
-                >
-                  Realizar Busca
-                </button>
-              </form>
+                    Realizar Busca
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="popup" id="popup">
-      <div class="popup-content">
-        <p>Realizando busca...</p>
-        <span id="countdown">10</span> segundos.
+      <div class="popup" id="popup">
+        <div class="popup-content">
+          <p>Realizando busca...</p>
+          <span id="countdown">10</span> segundos.
+        </div>
       </div>
     </div>
 
-    <div
-      class="modal fade"
-      id="formasPagamentoModal"
-      tabindex="-1"
-      aria-labelledby="formasPagamentoModalLabel"
-      aria-hidden="true"
-    ></div>
+    <footer class="bg-dark text-light text-center py-2">
+      <p>&copy; 2023 S.O.S. Pneus. Todos os direitos reservados.</p>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
@@ -212,9 +222,5 @@
         RealizarBuscaBtn.addEventListener("click", realizarBusca);
       });
     </script>
-
-    <footer class="bg-dark text-light text-center py-2">
-      <p>&copy; 2023 S.O.S. Pneus. Todos os direitos reservados.</p>
-    </footer>
   </body>
 </html>

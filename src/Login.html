@@ -113,52 +113,63 @@
       <p>&copy; 2023 S.O.S. Pneus. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
-      $(document).ready(function () {
-        $("#loginForm").submit(function (event) {
-          event.preventDefault(); // Evita o envio padrão do formulário
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("loginForm")
+          .addEventListener("submit", function (event) {
+            event.preventDefault(); // Evita o envio padrão do formulário
 
-          // Obtenha os valores do formulário
-          var email = $("#exampleInputEmail1").val();
-          var senha = $("#exampleInputPassword1").val();
+            // Obtenha os valores do formulário
+            var email = document.getElementById("exampleInputEmail1").value;
+            var senha = document.getElementById("exampleInputPassword1").value;
 
-          // Verifique se os campos estão preenchidos
-          if (!email || !senha) {
-            $("#loginError").text("Por favor, preencha todos os campos.");
-            return;
-          }
+            // Verifique se os campos estão preenchidos
+            if (!email || !senha) {
+              document.getElementById("loginError").textContent =
+                "Por favor, preencha todos os campos.";
+              return;
+            }
 
-          var manterConectado = $("#exampleCheck1").prop("checked");
-          var prestador = $("#prestadorCheck").prop("checked");
+            var manterConectado =
+              document.getElementById("exampleCheck1").checked;
+            var prestador = document.getElementById("prestadorCheck").checked;
 
-          // Faça a requisição para o servidor de autenticação
-          $.ajax({
-            url: "http://localhost:3000/login",
-            method: "POST",
-            contentType: "application/json",
-            data: JSON.stringify({
-              email: email,
-              senha: senha,
-              manterConectado: manterConectado,
-              prestador: prestador,
-            }),
-            success: function (response) {
-              console.log("Login bem-sucedido", response);
+            // Faça a requisição para o servidor de autenticação usando fetch
+            fetch("http://localhost:3000/login", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                email: email,
+                senha: senha,
+                manterConectado: manterConectado,
+                prestador: prestador,
+              }),
+            })
+              .then(function (response) {
+                if (!response.ok) {
+                  throw new Error("Erro na requisição: " + response.statusText);
+                }
+                return response.json();
+              })
+              .then(function (data) {
+                console.log("Login bem-sucedido", data);
 
-              // Redirecione para a página apropriada com base no tipo de usuário
-              if (prestador) {
-                window.location.href = "Prestador.html";
-              } else {
-                window.location.href = "Cliente.html";
-              }
-            },
-            error: function (error) {
-              // Exiba mensagens de erro, se houverem
-              $("#loginError").text("Erro: " + error.responseJSON.error);
-            },
+                // Redirecione para a página apropriada com base no tipo de usuário
+                if (prestador) {
+                  window.location.href = "Prestador.html";
+                } else {
+                  window.location.href = "Cliente.html";
+                }
+              })
+              .catch(function (error) {
+                // Exiba mensagens de erro, se houverem
+                document.getElementById("loginError").textContent =
+                  "Erro: " + error.message;
+              });
           });
-        });
       });
     </script>
   </body>

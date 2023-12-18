@@ -227,27 +227,31 @@
     </footer>
 
     <script>
-      $(document).ready(function () {
+      document.addEventListener("DOMContentLoaded", function () {
         // Manipula a mudança no tipo de usuário
-        $("#tipoUsuario").change(function () {
-          if ($(this).val() === "prestador") {
-            $("#cnpjGroup").show();
-          } else {
-            $("#cnpjGroup").hide();
-          }
+        const tipoUsuario = document.getElementById("tipoUsuario");
+        const cnpjGroup = document.getElementById("cnpjGroup");
+
+        tipoUsuario.addEventListener("change", function () {
+          cnpjGroup.style.display =
+            tipoUsuario.value === "prestador" ? "block" : "none";
         });
 
         // Manipula o envio do formulário
-        $("#cadastroForm").submit(function (event) {
+        const cadastroForm = document.getElementById("cadastroForm");
+        const successModal = new bootstrap.Modal(
+          document.getElementById("successModal")
+        );
+        const okButton = document.getElementById("okButton");
+
+        cadastroForm.addEventListener("submit", function (event) {
           event.preventDefault();
 
           // Verifica se todos os campos obrigatórios estão preenchidos
-          var isValid = true;
-          $("#cadastroForm [required]").each(function () {
-            if (!$(this).val()) {
-              isValid = false;
-              return false; // Sai do loop se encontrar um campo não preenchido
-            }
+          const isValid = Array.from(cadastroForm.elements).every(function (
+            element
+          ) {
+            return !element.required || element.value.trim() !== "";
           });
 
           if (!isValid) {
@@ -258,33 +262,33 @@
           }
 
           // Coleta os dados do formulário
-          const formData = $(this).serialize();
+          const formData = new FormData(cadastroForm);
 
           // Exibe o modal de sucesso
-          $("#successModal").modal("show");
+          successModal.show();
 
           // Adiciona um manipulador para o botão "OK" no modal
-          $("#okButton").click(function () {
+          okButton.addEventListener("click", function () {
             // Envia uma requisição POST para o servidor após clicar em "OK"
-            $.ajax({
-              type: "POST",
-              url: "http://localhost:3000/usuarios", // Atualize a URL conforme necessário
-              data: formData,
-              success: function (response) {
+            fetch("http://localhost:3000/usuarios", {
+              method: "POST",
+              body: formData,
+            })
+              .then((response) => {
+                if (!response.ok) {
+                  throw new Error("Erro ao cadastrar");
+                }
                 // Limpa o formulário após o sucesso
-                $("#cadastroForm")[0].reset();
-
+                cadastroForm.reset();
                 // Fecha o modal
-                $("#successModal").modal("hide");
-
+                successModal.hide();
                 // Redireciona para a página de login
                 window.location.href = "Login.html";
-              },
-              error: function (error) {
-                console.error("Erro ao cadastrar:", error.responseText);
+              })
+              .catch((error) => {
+                console.error("Erro ao cadastrar:", error.message);
                 // Trate os erros conforme necessário
-              },
-            });
+              });
           });
         });
       });
