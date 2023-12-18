@@ -23,84 +23,6 @@
       "termos": "on",
       "autorizacaoGPS": "on",
       "id": 2
-    },
-    {
-      "tipoUsuario": "prestador",
-      "nome": "Alexandre",
-      "telefone": "(31) 99454-9068",
-      "email": "martins.assis.0512@gmail.com",
-      "senha": "123",
-      "confirmarSenha": "123",
-      "cnpj": " 11.361.974/0001-17",
-      "termos": "on",
-      "autorizacaoGPS": "on",
-      "id": 3
-    },
-    {
-      "tipoUsuario": "cliente",
-      "nome": "Alexandre",
-      "telefone": "(31) 98314-0709",
-      "email": "martins.assis.0515@gmail.com",
-      "senha": "123",
-      "confirmarSenha": "123",
-      "cnpj": "",
-      "termos": "on",
-      "autorizacaoGPS": "on",
-      "id": 4
-    },
-    {
-      "tipoUsuario": "cliente",
-      "nome": "Luis",
-      "telefone": "(31) 99454-9068",
-      "email": "luis2023@gmail.com",
-      "senha": "123",
-      "confirmarSenha": "123",
-      "cnpj": "",
-      "termos": "on",
-      "autorizacaoGPS": "on",
-      "id": 5
-    },
-    {
-      "tipoUsuario": "prestador",
-      "nome": "Fernando",
-      "telefone": "(31) 97598-2021",
-      "email": "fernando123@gmail.com",
-      "senha": "123",
-      "confirmarSenha": "123",
-      "cnpj": " 11.361.974/0001-17",
-      "termos": "on",
-      "autorizacaoGPS": "on",
-      "id": 6
-    },
-    {
-      "tipoUsuario": "cliente",
-      "nome": "Fernando",
-      "telefone": "(31) 99454-9068",
-      "email": "fernando@gmail.com",
-      "senha": "123",
-      "confirmarSenha": "123",
-      "cnpj": "",
-      "termos": "on",
-      "autorizacaoGPS": "on",
-      "id": 7
-    },
-    {
-      "tipoUsuario": "cliente",
-      "nome": "Renata",
-      "telefone": "(31) 99454-9068",
-      "email": "renataleondas27@gmail.com",
-      "senha": "123",
-      "confirmarSenha": "123",
-      "cnpj": "",
-      "termos": "on",
-      "autorizacaoGPS": "on",
-      "id": 8
-    },
-    {
-      "id": 9
-    },
-    {
-      "id": 10
     }
   ],
   "login": [
@@ -108,34 +30,6 @@
       "id": 1,
       "email": "usuario@exemplo.com",
       "senha": "senha123"
-    },
-    {
-      "email": "martins.assis.0511@gmail.com",
-      "senha": "123",
-      "manterConectado": true,
-      "prestador": false,
-      "id": 2
-    },
-    {
-      "email": "martins.assis.0511@gmail.com",
-      "senha": "123",
-      "manterConectado": true,
-      "prestador": false,
-      "id": 3
-    },
-    {
-      "email": "wagnerjunior2002@gmail.com",
-      "senha": "123",
-      "manterConectado": true,
-      "prestador": false,
-      "id": 4
-    },
-    {
-      "email": "martins.assis.0511@gmail.com",
-      "senha": "123",
-      "manterConectado": true,
-      "prestador": false,
-      "id": 5
     }
   ],
   "avaliacoes": [
@@ -152,13 +46,6 @@
       "comentario": "Péssimo trabalho!",
       "rating": "1",
       "id": 3
-    },
-    {
-      "nome": "Wagner",
-      "data": "2023-12-17",
-      "comentario": "Serviço foi bem feito, mas o prestador era arrogante!",
-      "rating": "3",
-      "id": 4
     }
   ],
   "posts": [],
