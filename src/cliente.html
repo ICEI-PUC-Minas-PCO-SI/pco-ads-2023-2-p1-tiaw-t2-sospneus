@@ -18,14 +18,13 @@
     ></script>
 
     <title>S.O.S. Pneus</title>
-
     <style>
       body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
         height: 100%;
-        background-color: #f8f9fa;
+        background-color: #f8f9fa; /* Cor de fundo clara para melhor contraste */
       }
 
       .header {
@@ -79,13 +78,14 @@
         width: 100%;
       }
 
+      /* Ajustes para melhorar a responsividade */
       main {
-        padding-bottom: 60px;
+        padding-bottom: 60px; /* Altura estimada do footer */
       }
 
       .botao {
-        width: 90%;
-        margin: auto;
+        width: 90%; /* Definindo a largura do botão como 70% */
+        margin: auto; /* Centraliza o botão */
       }
 
       .select-veiculo {
@@ -95,12 +95,12 @@
       @media (min-width: 768px) {
         .botao {
           width: 90%;
-          margin: auto;
+          margin: auto; /* Centraliza o botão */
         }
 
         .select-veiculo {
-          width: 90%;
-          margin: auto;
+          width: 90%; /* Definindo a largura do seletor como 70% */
+          margin: auto; /* Centraliza o seletor */
         }
       }
     </style>
@@ -159,12 +159,6 @@
     </footer>
 
     <script>
-      // Recupere o e-mail do localStorage
-      var userEmail = localStorage.getItem("userEmail");
-
-      // Se o e-mail estiver disponível, exiba a mensagem de boas-vindas
-      if (userEmail) setWelcomeMessage(userEmail);
-
       function iniciarBusca() {
         document.getElementById("map").style.display = "block";
         const center = { lat: -19.91482, lng: -44.0818 };
