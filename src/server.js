@@ -78,3 +78,7 @@ app.post("/avaliacoes", (req, res) => {
     res.status(500).json({ error: "Erro interno no servidor" });
   }
 });
+
+app.get("/historico", (req, res) => {
+  res.json({ historico: bancoDeDados });
+});

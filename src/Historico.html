@@ -113,5 +113,84 @@
     </footer>
 
     <script src="seu-script.js"></script>
+    <!-- ... Seu código HTML anterior ... -->
+
+    <script>
+      // Variável para armazenar a URL do servidor (ajuste conforme necessário)
+      const serverURL = "http://localhost:3000";
+    
+      // Função para obter o histórico do servidor e atualizar a tabela HTML
+      function obterHistorico() {
+        fetch(`${serverURL}/historico`)
+          .then(response => response.json())
+          .then(data => {
+            atualizarTabelaHistorico(data.historico);
+          })
+          .catch(error => console.error("Erro ao obter histórico:", error));
+      }
+    
+      // Função para atualizar a tabela HTML com os dados do histórico
+      function atualizarTabelaHistorico(historico) {
+        var tabela = document.querySelector("table tbody");
+        tabela.innerHTML = "";
+    
+        historico.forEach(function (item) {
+          var row = tabela.insertRow();
+          var cellData = row.insertCell(0);
+          var cellDescricao = row.insertCell(1);
+    
+          cellData.textContent = item.data;
+          cellDescricao.textContent = item.descricao;
+        });
+      }
+    
+      // Função para buscar avaliações com base no tempo selecionado
+      function buscarAvaliacoes() {
+        var tempoSelecionado = document.getElementById("tipoUsuario").value;
+    
+        // Lógica para decidir como buscar avaliações com base no tempo selecionado
+        // Aqui você pode ajustar conforme necessário, considerando sua estrutura real
+        switch (tempoSelecionado) {
+          case "3dias":
+            // Lógica para buscar avaliações dos últimos 3 dias
+            break;
+          case "7dias":
+            // Lógica para buscar avaliações dos últimos 7 dias
+            break;
+          case "30dias":
+            // Lógica para buscar avaliações dos últimos 30 dias
+            break;
+          case "dataEspecifica":
+            // Lógica para buscar avaliações em uma data específica
+            var dataEspecifica = document.getElementById("dataEspecifica").value;
+            // Aqui você pode usar a dataEspecifica para buscar as avaliações
+            break;
+          default:
+            console.error("Opção inválida");
+        }
+      }
+    
+      // Adiciona um ouvinte de evento ao botão "Buscar"
+      document.getElementById("btnBuscar").addEventListener("click", buscarAvaliacoes);
+    
+      // Função chamada ao carregar a página para obter e exibir o histórico inicial
+      window.onload = function () {
+        obterHistorico();
+      };
+    
+      // Exemplo de como adicionar um novo registro ao banco de dados
+      function adicionarNovoRegistro() {
+        var data = "16/01/2023";
+        var descricao = "Novo registro adicionado";
+        adicionarRegistro(data, descricao);
+    
+        // Atualiza a tabela após adicionar o novo registro
+        obterHistorico();
+      }
+    </script>
+    <script src="seu-script.js" type="text/javascript"></script>
+  </body>
+</html>
+
   </body>
 </html>
