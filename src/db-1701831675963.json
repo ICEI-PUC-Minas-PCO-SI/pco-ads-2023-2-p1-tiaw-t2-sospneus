@@ -1,0 +1,83 @@
+{
+  "usuarios": [
+    {
+      "nome": "Alexandre",
+      "telefone": "31 992363036",
+      "email": "martins.assis.0511@gmail.com",
+      "senha": "123",
+      "confirmarSenha": "123",
+      "rua": "rua vc3",
+      "numero": "273",
+      "cep": "32050-180",
+      "bairro": "Nova Contagem",
+      "cidade": "Contagem",
+      "cnpj": " 11.361.974/0001-17",
+      "termos": "on",
+      "autorizacaoGPS": "on",
+      "id": "96b388a8-7436-44c7-a15f-b016d94be16f"
+    },
+    {
+      "nome": "Wagner",
+      "telefone": "31 123456789",
+      "email": "wagnergay@gmail.com",
+      "senha": "123456",
+      "confirmarSenha": "123456",
+      "rua": "rua vl15",
+      "numero": "123",
+      "cep": "32050-180",
+      "bairro": "Nova Contagem",
+      "cidade": "Contagem",
+      "cnpj": " 11.361.974/0001-17",
+      "termos": "on",
+      "autorizacaoGPS": "on",
+      "id": "97341d0b-82f9-4548-83b3-46e635f8b190"
+    },
+    {
+      "nome": "Fernando",
+      "telefone": "31 83145987",
+      "email": "fernando123@gmail.com",
+      "senha": "123456",
+      "confirmarSenha": "123456",
+      "rua": "Inteligente",
+      "numero": "69",
+      "cep": "32050-179",
+      "bairro": "Eldorado",
+      "cidade": "Contagem",
+      "cnpj": " 11.361.974/0001-17",
+      "termos": "on",
+      "autorizacaoGPS": "on",
+      "id": "cac322dc-aac7-4c16-b161-0071382487d5"
+    },
+    {
+      "nome": "Luis",
+      "telefone": "31 123456789",
+      "email": "luis2023@gmail.com",
+      "senha": "12345",
+      "confirmarSenha": "12345",
+      "rua": "rua visconde",
+      "numero": "74",
+      "cep": "32050-220",
+      "bairro": "Fonte Grande",
+      "cidade": "Contagem",
+      "cnpj": " 11.361.974/0001-17",
+      "termos": "on",
+      "autorizacaoGPS": "on",
+      "id": "p4fuzR6"
+    },
+    {
+      "nome": "Alexandre",
+      "telefone": "31 992363036",
+      "email": "martins.assis.0511@gmail.com",
+      "senha": "123",
+      "confirmarSenha": "123",
+      "rua": "rua vc3",
+      "numero": "273",
+      "cep": "32050-180",
+      "bairro": "Nova Contagem",
+      "cidade": "Contagem",
+      "termos": "on",
+      "autorizacaoGPS": "on",
+      "id": "cC-M7gj"
+    }
+  ]
+}
